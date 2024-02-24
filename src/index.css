@@ -86,3 +86,24 @@ body {
 .homesection--ball{
   background: var(--secondary);
 }
+
+.marquee-fade {
+  position: absolute;
+  top: 0;
+  background-image: linear-gradient(to right, var(--primary) 5%, transparent 10%, transparent 50%, transparent 90%, var(--primary) 95%);
+  z-index: 90;
+}
+.rotate--svg {
+  animation: rotatePlanet 3s infinite linear;
+}
+@keyframes rotatePlanet {
+  0%{
+    transform: rotate(0deg);
+  }
+  50%{
+      transform: rotate(180deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}

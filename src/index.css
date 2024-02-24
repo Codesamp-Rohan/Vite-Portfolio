@@ -4,30 +4,47 @@
 
 @font-face {
   font-family: st;
-  src: url(Fonts/curse.woff2);
+  src: url(/Vite-Portfolio/Fonts/curse.woff2);
 }
 @font-face {
   font-family: tilt;
-  src: url(Fonts/Inferi.woff2.otf);
+  src: url(/Vite-Portfolio/Fonts/Inferi.woff2.otf);
+}
+@font-face {
+  font-family: uk;
+  src: url(/Vite-Portfolio/Fonts/Tilt.woff2.otf);
 }
 
+@font-face {
+  font-family: font;
+  src: url(/Vite-Portfolio/Fonts/ClashGrotesk-Regular.woff2);
+}
 :root {
-  font-family: st;
+  font-family: font, 'sans-serif';
   line-height: 1.15;
 
   color-scheme: light dark;
-  color: rgba(0, 0, 0, 0.87);
-  background-color: #fff7f1;
+  color: #ffffff;
+  background-color: var(--primary);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  --primary: #0f1116;
+  --secondary: #11151f;
+  --border--primary: #404246;
+  --border--secondary: #273550;
+  --purple: #6e40c9;
+  --green: #97ee81;
 }
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+.heading--para{
+  color: var(--green);
 }
 body {
   overflow-x: hidden;
@@ -38,7 +55,7 @@ body {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background-color: #000000;
+  background-color: #eee;
   margin-right: 5px;
 }
 .main--title {
@@ -46,7 +63,6 @@ body {
 }
 .ball1 {
   animation: ball1 infinite 1s ease-in-out;
-  animation-delay: 0;
 }
 .ball2 {
   animation: ball1 infinite 1s ease-in-out;
@@ -66,4 +82,7 @@ body {
   100% {
     scale: 0.8;
   }
+}
+.homesection--ball{
+  background: var(--secondary);
 }

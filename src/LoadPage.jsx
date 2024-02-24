@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 export function LoadPage() {
   return (
-    <>
+    <div className="flex z-[999]">
       <motion.div
         initial={{ y: 0 }}
         animate={{ y: "-100%" }}
@@ -36,6 +36,6 @@ export function LoadPage() {
           <span className="ball3 w-[100px] h-[100px] drop-shadow-2xl absolute rounded-full bg-[#ececec]"></span>
         </div>
       </motion.div>
-    </>
+    </div>
   );
 }

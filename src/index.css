@@ -107,3 +107,22 @@ body {
     transform: rotate(360deg);
   }
 }
+.blur--blob{
+  filter: blur(100px);
+}
+.project--link{
+  position: relative;
+}
+.project--link::after{
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #eee;
+  transition: 300ms;
+}
+.project--link:hover::after{
+  width: 100%;
+}

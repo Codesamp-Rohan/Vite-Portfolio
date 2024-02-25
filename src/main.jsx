@@ -6,7 +6,7 @@ import {ProjectPage} from "./ProjectPage.jsx";
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <App />
-    {/*  <ProjectPage />*/}
+    {/*<App />*/}
+      <ProjectPage />
   </React.StrictMode>,
 )

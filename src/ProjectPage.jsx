@@ -1,7 +1,9 @@
 export function ProjectPage(){
     const projectDetails = [
-        {img: "/Vite-Portfolio/Projects/sibiro.png", sideImg: "/Vite-Portfolio/Projects/sibiro--menu.png", content: "empowers developers to complete tasks 55% faster with contextualized AI coding assistance across workflows.", exploreLinks: "Explore SIBIRO", quickLinks: "sibiro.ru", blob: "6e40c999"},
-        {img: "/Vite-Portfolio/Projects/docyard.png", sideImg: "/Vite-Portfolio/Projects/sibiro--menu.png", content: "empowers developers to complete tasks 55% faster with contextualized AI coding assistance across workflows.", exploreLinks: "Explore DOCYARD", quickLinks: "docyard.co.in", blob: "97ee8159"}
+        {img: "/Vite-Portfolio/Projects/sibiro.png", sideImg: "/Vite-Portfolio/Projects/sibiro--menu.png", content: "empowers developers to complete tasks 55% faster with contextualized AI coding assistance across workflows.", exploreLinksBtn: "Explore SIBIRO", exploreLinks: "https://sibiro.ru", quickLinksBtn: "sibiro.ru", blob: "6e40c999"},
+        {img: "/Vite-Portfolio/Projects/docyard.png", sideImg: "/Vite-Portfolio/Projects/docyard--menu.png", content: "empowers developers to complete tasks 55% faster with contextualized AI coding assistance across workflows.", exploreLinksBtn: "Explore DOCYARD", exploreLinks: "https://docyard.co.in", quickLinksBtn: "docyard.co.in", blob: "97ee8199"},
+        {img: "/Vite-Portfolio/Projects/portfolio.png", sideImg: "/Vite-Portfolio/Projects/portfolio--menu.png", content: "empowers developers to complete tasks 55% faster with contextualized AI coding assistance across workflows.", exploreLinksBtn: "Explore PREVIOUS PORTFOLIO", exploreLinks: "https://codesamp-rohan.github.io/Port-Folio/", quickLinksBtn: "previous-portfolio.me", blob: "EECF8159"},
+        {img: "/Vite-Portfolio/Projects/cosmetics.png", sideImg: "/Vite-Portfolio/Projects/cosmetics--menu.png", content: "empowers developers to complete tasks 55% faster with contextualized AI coding assistance across workflows.", exploreLinksBtn: "Explore COSMETICS", exploreLinks: "https://codesamp-rohan.github.io/Cosmetics/", quickLinksBtn: "cosmetics.me", blob: "eeeeee59"}
     ]
 
     return (
@@ -29,6 +31,8 @@ function Project({ ProjectDetails }) {
         <>
             <ProjectFirst ProjectDetails={ProjectDetails[0]}/>
             <ProjectFirst ProjectDetails={ProjectDetails[1]}/>
+            <ProjectFirst ProjectDetails={ProjectDetails[2]}/>
+            <ProjectFirst ProjectDetails={ProjectDetails[3]}/>
         </>
     );
 
@@ -55,7 +59,7 @@ function Project({ ProjectDetails }) {
 
     function SideImage({ ProjectDetails }) {
         return (
-            <img className="absolute w-[24vw] z-[90] rounded-md bottom-[0] right-[10%]"
+            <img className="absolute w-[24vw] z-[90] rounded-md border-[1px] border-[#000] shadow-3xl bottom-[0] right-[10%]"
                  src={ProjectDetails.sideImg} alt="side--img"></img>
         )
     }
@@ -63,7 +67,7 @@ function Project({ ProjectDetails }) {
     function ProjectMainImg({ ProjectDetails }) {
         return (
             <span className="w-[80vw] overflow-hidden">
-            <img className="rounded-3xl scale-[0.97] hover:scale-[1] grayscale-[30%] hover:grayscale-0 duration-[300ms]"
+            <img className="rounded-3xl scale-[0.97] hover:scale-[1] duration-[300ms]"
                  src={ProjectDetails.img} alt="Project--img"></img>
                 </span>
         )
@@ -72,14 +76,14 @@ function Project({ ProjectDetails }) {
     function ProjectContent({ ProjectDetails }) {
         return (
             <span className="w-[55vw] flex">
-                <h1 className="text-[2vw] text-start text-[#686b72]"><a className="text-[#6e40c9] hover:text-[#97ee81]" href={ProjectDetails.quickLinks} target="_blank">{ProjectDetails.quickLinks}</a> {ProjectDetails.content}</h1>
+                <h1 className="text-[2vw] text-start text-[#686b72]"><a className="text-[#6e40c9] hover:text-[#97ee81]" href={ProjectDetails.exploreLinks} target="_blank">{ProjectDetails.quickLinksBtn}</a> {ProjectDetails.content}</h1>
             </span>
         )
     }
 
     function ProjectLinks({ ProjectDetails }) {
         return (
-            <a className="project--link text-[1.8rem] w-fit" href={ProjectDetails.exploreLinks}>{ProjectDetails.exploreLinks}</a>
+            <a className="project--link text-[2.4vw] w-fit" target="_blank" href={ProjectDetails.exploreLinks}>{ProjectDetails.exploreLinksBtn}</a>
         )
     }
 }

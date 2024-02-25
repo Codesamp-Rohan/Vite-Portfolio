@@ -3,6 +3,34 @@ import { Navbar } from "./Navbar";
 import { motion } from "framer-motion";
 import {ProjectPage} from "./ProjectPage.jsx";
 
+
+import { useEffect, useRef } from 'react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger);
+
+    const AppSrcoll = () => {
+        const ref = useRef();
+        useEffect(() => {
+            const el = ref.current;
+            gsap.fromTo(el, { scale: 0 }, {
+                scale: 1.4, duration: 1, scrollTrigger: {
+                    trigger: el
+                }
+            })
+        }, [])
+        return (
+            <div className='App'>
+                <div style={{ height: '100vh' }}></div>
+                <img ref={ref}
+                     src=
+                         "https://media.geeksforgeeks.org/wp-content/cdn-uploads/gfg_200x200-min.png"
+                     alt="" />
+            </div>
+        )
+    }
+
+
 function App() {
   return (
     <>
@@ -22,7 +50,7 @@ export default App;
 
 function Main() {
   return (
-    <div className="flex relative items-center border-b-[0.5px] border-b-[#404246] overflow-hidden">
+    <div className="flex AppScroll relative items-center border-b-[0.5px] border-b-[#404246] overflow-hidden">
       <div className="main--title border-r-[0.5px] border-r-[#404246] h-[60vh] px-[2rem] flex items-center">
         <h1 className="text-[5rem] line-height-[10px] text-[#424769] w-[60vw]">
           <strong className="text-[#eee]">Front-End</strong> and{" "}

@@ -19,6 +19,9 @@
   font-family: font;
   src: url(/Vite-Portfolio/Fonts/ClashGrotesk-Regular.woff2);
 }
+html{
+  scroll-behavior: smooth;
+}
 :root {
   font-family: font, 'sans-serif';
   line-height: 1.15;

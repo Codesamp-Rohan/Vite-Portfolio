@@ -55,7 +55,7 @@ function Project({ ProjectDetails }) {
 
     function SideImage({ ProjectDetails }) {
         return (
-            <img className="absolute w-[24vw] z-[99] rounded-md bottom-[0] right-[10%]"
+            <img className="absolute w-[24vw] z-[90] rounded-md bottom-[0] right-[10%]"
                  src={ProjectDetails.sideImg} alt="side--img"></img>
         )
     }

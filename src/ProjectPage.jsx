@@ -3,7 +3,8 @@ export function ProjectPage(){
         {img: "/Vite-Portfolio/Projects/sibiro.png", sideImg: "/Vite-Portfolio/Projects/sibiro--menu.png", content: "empowers developers to complete tasks 55% faster with contextualized AI coding assistance across workflows.", exploreLinksBtn: "Explore SIBIRO", exploreLinks: "https://sibiro.ru", quickLinksBtn: "sibiro.ru", blob: "6e40c999"},
         {img: "/Vite-Portfolio/Projects/docyard.png", sideImg: "/Vite-Portfolio/Projects/docyard--menu.png", content: "empowers developers to complete tasks 55% faster with contextualized AI coding assistance across workflows.", exploreLinksBtn: "Explore DOCYARD", exploreLinks: "https://docyard.co.in", quickLinksBtn: "docyard.co.in", blob: "97ee8199"},
         {img: "/Vite-Portfolio/Projects/portfolio.png", sideImg: "/Vite-Portfolio/Projects/portfolio--menu.png", content: "empowers developers to complete tasks 55% faster with contextualized AI coding assistance across workflows.", exploreLinksBtn: "Explore PREVIOUS PORTFOLIO", exploreLinks: "https://codesamp-rohan.github.io/Port-Folio/", quickLinksBtn: "previous-portfolio.me", blob: "EECF8159"},
-        {img: "/Vite-Portfolio/Projects/cosmetics.png", sideImg: "/Vite-Portfolio/Projects/cosmetics--menu.png", content: "empowers developers to complete tasks 55% faster with contextualized AI coding assistance across workflows.", exploreLinksBtn: "Explore COSMETICS", exploreLinks: "https://codesamp-rohan.github.io/Cosmetics/", quickLinksBtn: "cosmetics.me", blob: "eeeeee59"}
+        {img: "/Vite-Portfolio/Projects/cosmetics.png", sideImg: "/Vite-Portfolio/Projects/cosmetics--menu.png", content: "empowers developers to complete tasks 55% faster with contextualized AI coding assistance across workflows.", exploreLinksBtn: "Explore COSMETICS", exploreLinks: "https://codesamp-rohan.github.io/Cosmetics/", quickLinksBtn: "cosmetics.me", blob: "eeeeee59"},
+        {img: "/Vite-Portfolio/Projects/quasar.png", sideImg: "/Vite-Portfolio/Projects/quasar--menu.png", content: "empowers developers to complete tasks 55% faster with contextualized AI coding assistance across workflows.", exploreLinksBtn: "Explore QUASAR", exploreLinks: "/", quickLinksBtn: "quasar", blob: "395B30FF"}
     ]
 
     return (
@@ -33,6 +34,7 @@ function Project({ ProjectDetails }) {
             <ProjectFirst ProjectDetails={ProjectDetails[1]}/>
             <ProjectFirst ProjectDetails={ProjectDetails[2]}/>
             <ProjectFirst ProjectDetails={ProjectDetails[3]}/>
+            <ProjectFirst ProjectDetails={ProjectDetails[4]}/>
         </>
     );
 
@@ -66,7 +68,7 @@ function Project({ ProjectDetails }) {
 
     function ProjectMainImg({ ProjectDetails }) {
         return (
-            <span className="w-[80vw] overflow-hidden">
+            <span className="w-[70vw] overflow-hidden">
             <img className="rounded-3xl scale-[0.97] hover:scale-[1] duration-[300ms]"
                  src={ProjectDetails.img} alt="Project--img"></img>
                 </span>
@@ -75,7 +77,7 @@ function Project({ ProjectDetails }) {
 
     function ProjectContent({ ProjectDetails }) {
         return (
-            <span className="w-[55vw] flex">
+            <span className="w-[45vw] flex">
                 <h1 className="text-[2vw] text-start text-[#686b72]"><a className="text-[#6e40c9] hover:text-[#97ee81]" href={ProjectDetails.exploreLinks} target="_blank">{ProjectDetails.quickLinksBtn}</a> {ProjectDetails.content}</h1>
             </span>
         )

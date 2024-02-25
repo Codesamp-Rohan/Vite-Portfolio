@@ -7,6 +7,7 @@ import {ProjectPage} from "./ProjectPage.jsx";
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import {Contact} from "./Contact.jsx";
 gsap.registerPlugin(ScrollTrigger);
 
     const AppSrcoll = () => {
@@ -42,6 +43,7 @@ function App() {
       <AboutMe />
       <TechMarquee />
       <ProjectPage />
+        <Contact />
     </>
   );
 }

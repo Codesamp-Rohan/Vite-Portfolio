@@ -13,7 +13,7 @@ function App() {
       <GithubSection />
       <AboutMe />
       <TechMarquee />
-        <ProjectPage />
+      <ProjectPage />
     </>
   );
 }

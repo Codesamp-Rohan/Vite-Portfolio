@@ -2,7 +2,7 @@ export function Navbar() {
   const navLinks = ["Work", "Services", "Insight"];
   return (
     <>
-      <nav className="w-[100vw] py-[1rem] px-[1rem] flex sticky top-0 z-[99] bg-[#0f1116] items-center justify-between border-b-[0.4px] border-b-[#404246]">
+      <nav className="w-[100vw] py-[1rem] px-[1rem] flex sticky top-0 z-[100] bg-[#0f1116] items-center justify-between border-b-[0.4px] border-b-[#404246]">
         <span className="flex gap-[10px] items-center">
           <img
             className="w-[30px] h-[30px] object-cover grayscale-[100%] rounded-full"

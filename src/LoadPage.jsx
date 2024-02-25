@@ -11,7 +11,7 @@ export function LoadPage() {
           delay: 4.6,
           ease: "easeInOut",
         }}
-        className="flex items-center justify-center w-[100vw] h-[100vh] fixed z-[98] bg-[#424242]"></motion.div>
+        className="flex items-center justify-center w-[100vw] h-[100vh] fixed z-[999] bg-[#424242]"></motion.div>
       <motion.div
         initial={{ y: 0 }}
         animate={{ y: "-100%" }}
@@ -20,7 +20,7 @@ export function LoadPage() {
           delay: 4.4,
           ease: "easeInOut",
         }}
-        className="flex items-center justify-center w-[100vw] h-[100vh] fixed z-[99]  bg-[#202020]"></motion.div>
+        className="flex items-center justify-center w-[100vw] h-[100vh] fixed z-[999]  bg-[#202020]"></motion.div>
       <motion.div
         initial={{ y: 0 }}
         animate={{ y: "-100%" }}

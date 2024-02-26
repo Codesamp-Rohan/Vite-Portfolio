@@ -20,7 +20,7 @@ export function Sibiro(){
             <Slider />
             <ProjectContent />
             <ProjectPage />
-            <Contact/>
+            <Contact />
         </>
     )
 }

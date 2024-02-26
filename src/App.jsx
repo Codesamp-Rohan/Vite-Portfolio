@@ -131,19 +131,19 @@ function TechMarquee() {
     { name: "React Js", img: "/Vite-Portfolio/Icons/react.png" },
     {
       name: "Tailwind CSS",
-      img: "https://imgs.search.brave.com/l7OxzTza4qsfM6bke2p9GA-eF6-b3ilamjHYHs6TKUQ/rs:fit:32:32:1/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvODJmYTczY2Fi/MDNjOWMxNTVmZTRl/ODgzMDMyYTU0MGI2/MGYxZTFkNzhkMWZl/YmQ5OWNkN2E3Mzcx/NWUzY2VkYi90YWls/d2luZGNzcy5jb20v",
+      img: "/Vite-Portfolio/Icons/tailwind.png",
     },
     {
       name: "GSAP",
-      img: "https://imgs.search.brave.com/QN72Bvq58BQwT6zqVtca3P0wTl_jttTZWgLUfIpProw/rs:fit:32:32:1/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOTczOWNlYTZl/Mjg1ZGU1YmMwZDZm/Y2JjZmVlMTE5NWVj/ZWMxNTg4ZTQzZTRj/YzJlZDE5MjlmM2Nl/ZGVhYzEzZS9nc2Fw/LmNvbS8",
+      img: "/Vite-Portfolio/Icons/gsap.jpg",
     },
     {
       name: "ScrollTrigger",
-      img: "https://imgs.search.brave.com/QN72Bvq58BQwT6zqVtca3P0wTl_jttTZWgLUfIpProw/rs:fit:32:32:1/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOTczOWNlYTZl/Mjg1ZGU1YmMwZDZm/Y2JjZmVlMTE5NWVj/ZWMxNTg4ZTQzZTRj/YzJlZDE5MjlmM2Nl/ZGVhYzEzZS9nc2Fw/LmNvbS8",
+      img: "/Vite-Portfolio/Icons/gsap.jpg",
     },
     {
       name: "Framer-Motion",
-      img: "https://imgs.search.brave.com/ayJp8exjMnaVI8OPCrFOaWV7ttwAx0AbZN-dQSFIijc/rs:fit:32:32:1/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMDdmNmQwNjE5/Mjg3MDVkODRhYmQz/YjYwZThiMTQxMDMx/MTJkMWY4ODZkM2Qy/YTY1ODY1MWMxNjdk/ZmFkNzE1Ny93d3cu/ZnJhbWVyLmNvbS8",
+      img: "/Vite-Portfolio/Icons/framer-motion.png",
     },
   ];
 

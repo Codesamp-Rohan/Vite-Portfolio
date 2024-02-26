@@ -4,12 +4,12 @@ export function Contact(){
     ];
     return (
         <>
-            <div className="flex flex-col items-center">
-                <span className="w-[80vw]">
+            <div className="flex flex-col items-center border-y-[0.2px] border-y-[#404246]">
+                <span className="w-[80vw] border-[0.2px] border-[#404246]">
         <div className="border-b-[0.2px] border-b-[#404246]">
-            <h1 className="heading--para text-[18px] py-[30px]">Contact :</h1>
+            <h1 className="heading--para text-[18px] py-[30px] px-[20px]">Contact :</h1>
         </div>
-            <form className="py-[30px]">
+            <form className="py-[30px] px-[20px]">
                 <h1 className="text-[2.8vw]">Wanna know anything? Just text here 😁</h1>
                 <span className="flex flex-col gap-[10px] py-[40px]">
                 <input className="w-[45vw] text-[24px] border-[0.3px] border-[#97ee81] text-[#97ee81] bg-transparent p-[14px] rounded-md"
@@ -21,7 +21,7 @@ export function Contact(){
             </form>
                 </span>
             </div>
-            <footer className="flex justify-center items-center h-[30vh] border-t-[0.2px] border-t-[#404246]">
+            <footer className="flex justify-center items-center h-[30vh]">
                 <div className="w-[80vw] flex justify-between items-center">
                 <a>&copy; Rohan Chaudhary</a>
                     <span className="flex p-[4px] border-[0.3px] rounded-md border-[#6e40c9]  divide-x-[0.1px] divide-[#404246]">

@@ -133,3 +133,7 @@ input:focus {
   outline: none;
   border-color: #6e40c9;
 }
+.project--img{
+  /*background-image: linear-gradient(to right, var(--primary) 5%, #0f111639 30%, #0f111639 50%, #0f111639 70%, var(--primary) 95%), linear-gradient(to bottom, var(--primary) 5%, #0f111639 30%, #0f111639 50%, #0f111639 70%, var(--primary) 95%);*/
+
+}

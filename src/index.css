@@ -46,6 +46,20 @@ html{
   padding: 0;
   box-sizing: border-box;
 }
+::-moz-selection {
+  background-color: var(--green);
+  color: var(--purple);
+}
+
+::-webkit-selection {
+    background-color: var(--green);
+  color: var(--purple);
+}
+
+::selection {
+    background-color: var(--green);
+  color: var(--purple);
+}
 .heading--para{
   color: var(--green);
 }
@@ -135,5 +149,13 @@ input:focus {
 }
 .project--img{
   /*background-image: linear-gradient(to right, var(--primary) 5%, #0f111639 30%, #0f111639 50%, #0f111639 70%, var(--primary) 95%), linear-gradient(to bottom, var(--primary) 5%, #0f111639 30%, #0f111639 50%, #0f111639 70%, var(--primary) 95%);*/
-
+}
+.mouse-follower {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: transparent;
+  position: absolute;
+  animation: ease-in-out;
+  pointer-events: none;
 }

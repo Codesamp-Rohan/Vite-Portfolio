@@ -5,11 +5,13 @@ import AppScroll from './App.jsx'
 import './index.css'
 // import {ProjectPage} from "./ProjectPage.jsx";
 // import {Contact} from "./Contact.jsx";
-// import {Sibiro} from "./ProjectPages/cosmetics.jsx";
+import {Sibiro} from "./ProjectPages/cosmetics.jsx";
+import {MouseFollower} from "./MouseFollower.jsx";
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-      <AppScroll />
-      {/*<Sibiro />*/}
+      <MouseFollower />
+      {/*<AppScroll />*/}
+      <Sibiro />
     {/*<App />*/}
     {/*  <ProjectPage />*/}
     {/*  <Contact/>*/}

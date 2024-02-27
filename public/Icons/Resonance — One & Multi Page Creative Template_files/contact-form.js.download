@@ -1,5 +1,5 @@
 /* ---------------------------------------------
- Contact form
+ Footer form
  --------------------------------------------- */
 $(document).ready(function(){
     $("#submit_btn").click(function(){

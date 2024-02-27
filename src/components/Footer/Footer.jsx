@@ -1,11 +1,13 @@
-export function Contact(){
+import Navbar from "../Header/Navbar.jsx";
 
-        const scrollToTop = () => {
-            window.scrollTo({
-                top: 0,
-                behavior: "smooth",
-            })
-        }
+export function Footer(){
+
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+        })
+    }
 
     const socialLinks = [
         {name : "LinkedIn", url: "/"}, {name :"Github", url: "/"}, {name :"Instagram", url: "/"}, {name :"Gmail", url: "/"}

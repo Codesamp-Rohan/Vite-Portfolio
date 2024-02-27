@@ -4,20 +4,20 @@
 
 @font-face {
   font-family: st;
-  src: url(/Vite-Portfolio/Fonts/curse.woff2);
+  src: url(/Fonts/curse.woff2);
 }
 @font-face {
   font-family: tilt;
-  src: url(/Vite-Portfolio/Fonts/Inferi.woff2.otf);
+  src: url(/Fonts/Inferi.woff2.otf);
 }
 @font-face {
   font-family: uk;
-  src: url(/Vite-Portfolio/Fonts/Tilt.woff2.otf);
+  src: url(/Fonts/Tilt.woff2.otf);
 }
 
 @font-face {
   font-family: font;
-  src: url(/Vite-Portfolio/Fonts/ClashGrotesk-Regular.woff2);
+  src: url(/Fonts/ClashGrotesk-Regular.woff2);
 }
 html{
   scroll-behavior: smooth;

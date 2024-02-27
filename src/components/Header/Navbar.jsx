@@ -3,21 +3,18 @@ import { Link } from "react-router-dom";
 
 export default function Navbar(){
     const navLinks = [
-        {name: "Home", link: "/"},
-        {name: "Work", link: "/work"},
-        {name: "Services", link: "/services"},
+        {name: "Home", link: "/Vite-Portfolio/"},
+        {name: "Work", link: "/Vite-Portfolio/work"},
+        {name: "Services", link: "/Vite-Portfolio/services"},
     ]
     return (
         <>
-            {/*<Link to="/">Home</Link>*/}
-            {/*<Link to="/work">Work</Link>*/}
-            {/*<Link to="/services">Services</Link>*/}
             <nav
                 className="w-[100vw] py-[1rem] px-[1rem] flex sticky top-0 z-[99] bg-[#0f1116] items-center justify-between border-b-[0.4px] border-b-[#404246]">
                 <Link to="/" className="flex gap-[10px] items-center">
                     <img
                         className="w-[30px] h-[30px] object-cover grayscale-[100%] rounded-full"
-                        src="/Rohan.jpg"></img>
+                        src="/Vite-Portfolio/Rohan.jpg"></img>
                     <span>
             <p>Rohan</p>
             <p>Chaudhary</p>
@@ -34,7 +31,7 @@ export default function Navbar(){
                         );
                     })}
                 </ul>
-                <Link to="/contact"
+                <Link to="/Vite-Portfolio/contact"
                    className="dot flex items-center mr-[30px] uppercase text-[1.2rem] bg-[#6e40c9] py-[10px] rounded-md px-[10px]">
                     Contact
                 </Link>

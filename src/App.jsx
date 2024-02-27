@@ -10,11 +10,11 @@ export default function App() {
         <>
             <BrowserRouter>
                 <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/work" element={<Work />} />
-                    <Route path="/services" element={<Services />} />
-                    <Route path="/contact" element={<Contact />} />
-                    <Route path="/sibiro" element={<Sibiro />} />
+                    <Route path="/Vite-Portfolio/" element={<Home />} />
+                    <Route path="/Vite-Portfolio/work" element={<Work />} />
+                    <Route path="/Vite-Portfolio/services" element={<Services />} />
+                    <Route path="/Vite-Portfolio/contact" element={<Contact />} />
+                    <Route path="/Vite-Portfolio/sibiro" element={<Sibiro />} />
                 </Routes>
             </BrowserRouter>
         </>

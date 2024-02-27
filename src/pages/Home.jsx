@@ -2,6 +2,7 @@ import {motion} from "framer-motion";
 import {ProjectPage} from "../ProjectPage.jsx";
 import Navbar from "../components/Header/Navbar.jsx";
 import {Footer} from "../components/Footer/Footer.jsx";
+import {Link} from "react-router-dom";
 
 export default function Home(){
     return (
@@ -41,7 +42,7 @@ function GithubSection() {
             <div className="w-[100vw] flex justify-center py-[100px]">
                 <img
                     className="w-[90vw] border-[0.3px] border-[#404246] rounded-3xl"
-                    src="/GithubProfile.png"
+                    src="/Vite-Portfolio/GithubProfile.png"
                     alt="images"></img>
             </div>
         </>
@@ -61,11 +62,11 @@ function AboutMe() {
             make work meaningful.
               <br /> <br />I am high on SKILLS.
           </h1>
-          <a className="border-none" href="/public">
+          <Link className="border-none" to="/Vite-Portfolio/contact">
             <button className="px-[20px] py-[10px] rounded-md border-[0.2px] border-[#6e40c9] bg-[#6e40c9] text-[1.2rem] uppercase duration-300 hover:border-[#97ee81] hover:bg-[#97ee81] hover:text-[#000]">
               TALK
             </button>
-          </a>
+          </Link>
         </span>
             </div>
         </>
@@ -74,25 +75,25 @@ function AboutMe() {
 
 function TechMarquee() {
     const skills = [
-        { name: "HTML", img: "/Icons/html.png" },
-        { name: "CSS", img: "/Icons/css.png" },
-        { name: "JavaScript", img: "/Icons/js.png" },
-        { name: "React Js", img: "/Icons/react.png" },
+        { name: "HTML", img: "/Vite-Portfolio/Icons/html.png" },
+        { name: "CSS", img: "/Vite-Portfolio/Icons/css.png" },
+        { name: "JavaScript", img: "/Vite-Portfolio/Icons/js.png" },
+        { name: "React Js", img: "/Vite-Portfolio/Icons/react.png" },
         {
             name: "Tailwind CSS",
-            img: "/Icons/tailwind.png",
+            img: "/Vite-Portfolio/Icons/tailwind.png",
         },
         {
             name: "GSAP",
-            img: "/Icons/gsap.jpg",
+            img: "/Vite-Portfolio/Icons/gsap.jpg",
         },
         {
             name: "ScrollTrigger",
-            img: "/Icons/gsap.jpg",
+            img: "/Vite-Portfolio/Icons/gsap.jpg",
         },
         {
             name: "Framer-Motion",
-            img: "/Icons/framer-motion.png",
+            img: "/Vite-Portfolio/Icons/framer-motion.png",
         },
     ];
 

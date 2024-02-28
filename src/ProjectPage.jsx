@@ -1,16 +1,20 @@
-export function ProjectPage(){
+import {Link} from "react-router-dom";
+
+
+export function ProjectPage({ active }){
+
     const projectDetails = [
-        {img: "/Vite-Portfolio/Projects/sibiro.png", sideImg: "/Vite-Portfolio/Projects/sibiro--menu.png", content: "empowers developers to complete tasks 55% faster with contextualized AI coding assistance across workflows.", exploreLinksBtn: "Explore SIBIRO", exploreLinks: "https://sibiro.ru", quickLinksBtn: "sibiro.ru", blob: "6e40c999"},
-        {img: "/Vite-Portfolio/Projects/docyard.png", sideImg: "/Vite-Portfolio/Projects/docyard--menu.png", content: "empowers developers to complete tasks 55% faster with contextualized AI coding assistance across workflows.", exploreLinksBtn: "Explore DOCYARD", exploreLinks: "https://docyard.co.in", quickLinksBtn: "docyard.co.in", blob: "97ee8199"},
-        {img: "/Vite-Portfolio/Projects/portfolio.png", sideImg: "/Vite-Portfolio/Projects/portfolio--menu.png", content: "empowers developers to complete tasks 55% faster with contextualized AI coding assistance across workflows.", exploreLinksBtn: "Explore PREVIOUS PORTFOLIO", exploreLinks: "https://codesamp-rohan.github.io/Port-Folio/", quickLinksBtn: "previous-portfolio.me", blob: "EECF8159"},
-        {img: "/Vite-Portfolio/Projects/cosmetics.png", sideImg: "/Vite-Portfolio/Projects/cosmetics--menu.png", content: "empowers developers to complete tasks 55% faster with contextualized AI coding assistance across workflows.", exploreLinksBtn: "Explore COSMETICS", exploreLinks: "https://codesamp-rohan.github.io/Cosmetics/", quickLinksBtn: "cosmetics.me", blob: "eeeeee59"},
-        {img: "/Vite-Portfolio/Projects/quasar.png", sideImg: "/Vite-Portfolio/Projects/quasar--menu.png", content: "empowers developers to complete tasks 55% faster with contextualized AI coding assistance across workflows.", exploreLinksBtn: "Explore QUASAR", exploreLinks: "/", quickLinksBtn: "quasar", blob: "395B30FF"}
+        {img: "/Vite-Portfolio/Projects/sibiro.png", sideImg: "/Vite-Portfolio/Projects/sibiro--menu.png", content: "empowers developers to complete tasks 55% faster with contextualized AI coding assistance across workflows.", exploreLinksBtn: "Explore SIBIRO", exploreLinks: "/Vite-Portfolio/sibiro", quickLinksBtn: "sibiro.ru", blob: "6e40c999", dataValue: "1"},
+        {img: "/Vite-Portfolio/Projects/docyard.png", sideImg: "/Vite-Portfolio/Projects/docyard--menu.png", content: "empowers developers to complete tasks 55% faster with contextualized AI coding assistance across workflows.", exploreLinksBtn: "Explore DOCYARD", exploreLinks: "/Vite-Portfolio/docyard", quickLinksBtn: "docyard.co.in", blob: "97ee8199", dataValue: "2"},
+        {img: "/Vite-Portfolio/Projects/portfolio.png", sideImg: "/Vite-Portfolio/Projects/portfolio--menu.png", content: "empowers developers to complete tasks 55% faster with contextualized AI coding assistance across workflows.", exploreLinksBtn: "Explore PREVIOUS PORTFOLIO", exploreLinks: "/Vite-Portfolio/portfolio", quickLinksBtn: "previous-portfolio.me", blob: "EECF8159", dataValue: "3"},
+        {img: "/Vite-Portfolio/Projects/cosmetics.png", sideImg: "/Vite-Portfolio/Projects/cosmetics--menu.png", content: "empowers developers to complete tasks 55% faster with contextualized AI coding assistance across workflows.", exploreLinksBtn: "Explore COSMETICS", exploreLinks: "/Vite-Portfolio/cosmetics", quickLinksBtn: "cosmetics.me", blob: "eeeeee59", dataValue: "4"},
+        {img: "/Vite-Portfolio/Projects/quasar.png", sideImg: "/Vite-Portfolio/Projects/quasar--menu.png", content: "empowers developers to complete tasks 55% faster with contextualized AI coding assistance across workflows.", exploreLinksBtn: "Explore QUASAR", exploreLinks: "/Vite-Portfolio/quasar", quickLinksBtn: "quasar", blob: "395B30FF", dataValue: "5"}
     ]
 
     return (
         <>
             <ProjectPageHeading />
-            <Project ProjectDetails={projectDetails}/>
+            <Project ProjectDetails={projectDetails} active={active}/>
         </>
     )
 }
@@ -27,20 +31,21 @@ function ProjectPageHeading(){
 }
 
 
-function Project({ ProjectDetails }) {
+function Project({ ProjectDetails, active }) {
     return (
         <>
-            <ProjectFirst ProjectDetails={ProjectDetails[0]}/>
-            <ProjectFirst ProjectDetails={ProjectDetails[1]}/>
-            <ProjectFirst ProjectDetails={ProjectDetails[2]}/>
-            <ProjectFirst ProjectDetails={ProjectDetails[3]}/>
-            <ProjectFirst ProjectDetails={ProjectDetails[4]}/>
+            <ProjectFirst active={active} ProjectDetails={ProjectDetails[0]}/>
+            <ProjectFirst active={active} ProjectDetails={ProjectDetails[1]}/>
+            <ProjectFirst active={active} ProjectDetails={ProjectDetails[2]}/>
+            <ProjectFirst active={active} ProjectDetails={ProjectDetails[3]}/>
+            <ProjectFirst active={active} ProjectDetails={ProjectDetails[4]}/>
         </>
     );
 
-    function ProjectFirst({ ProjectDetails }) {
+    function ProjectFirst({ ProjectDetails, active }) {
+
         return (
-            <div className="flex flex-col items-center relative my-[100px]">
+            <div data-value={ProjectDetails.dataValue} className="flex flex-col items-center relative my-[100px]" style={{display: active === parseInt(ProjectDetails.dataValue) ? "none" : "flex"}}>
                 <Blob ProjectDetails={ProjectDetails}/>
                 <SideImage ProjectDetails={ProjectDetails}/>
                 <div className="flex flex-col gap-[30px] z-[50]">
@@ -51,6 +56,8 @@ function Project({ ProjectDetails }) {
             </div>
         )
     }
+
+
 
     function Blob({ ProjectDetails }) {
         return (
@@ -78,7 +85,7 @@ function Project({ ProjectDetails }) {
     function ProjectContent({ ProjectDetails }) {
         return (
             <span className="w-[45vw] flex">
-                <h1 className="project--content text-[2vw] text-start text-[#686b72]"><a className="text-[#6e40c9] hover:text-[#97ee81]" href={ProjectDetails.exploreLinks} target="_blank">{ProjectDetails.quickLinksBtn}</a> {ProjectDetails.content}</h1>
+                <h1 className="project--content text-[2vw] text-start text-[#686b72]"><Link className="text-[#6e40c9] hover:text-[#97ee81]" to={ProjectDetails.exploreLinks}>{ProjectDetails.quickLinksBtn}</Link> {ProjectDetails.content}</h1>
             </span>
         )
     }

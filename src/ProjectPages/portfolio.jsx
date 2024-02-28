@@ -4,17 +4,17 @@ import {ProjectPage} from "../ProjectPage.jsx";
 import Navbar from "../components/Header/Navbar.jsx";
 import {Footer} from "../components/Footer/Footer.jsx";
 
-export function Sibiro(){
-    let active = 1;
+export function Portfolio(){
+    let active = 3;
     return (
         <>
             <Navbar />
             <div>
                 <div className="h-[60vh] top--section relative border-b-[1px] border-b-[#404246]">
                     <span className="project--img z-[20] w-[100%] h-[100%] absolute text-[#000] top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]"></span>
-                    <img className="project--img absolute h-full w-full object-cover z-[19] brightness-[70%]" src="/Vite-Portfolio/Projects/sibiro.png" alt="bg-img"></img>
+                    <img className="project--img absolute h-full w-full object-cover z-[19] brightness-[70%]" src="/Vite-Portfolio/Projects/portfolio.png" alt="bg-img"></img>
                     <span className="absolute w-[100%] h-[100%] z-[50] flex items-end px-[30px]">
-                        <h1 className="text-[10vw]">SIBIRO</h1>
+                        <h1 className="text-[10vw]">PORTFOLIO</h1>
                     </span>
                 </div>
             </div>
@@ -32,9 +32,9 @@ const Slider = () => {
 
     // Replace these image sources with the actual file names of your images
     const images = [
-        '/Vite-Portfolio/Projects/sibiro.png',
-        '/Vite-Portfolio/Projects/sibiro-2.png',
-        '/Vite-Portfolio/Projects/sibiro-3.png'
+        '/Vite-Portfolio/Projects/portfolio.png',
+        '/Vite-Portfolio/Projects/portfolio-2.png',
+        '/Vite-Portfolio/Projects/portfolio-3.png'
     ];
 
     // Use the useSpring hook to animate the slide transition
@@ -73,12 +73,12 @@ function ProjectContent(){
                         <span
                             className="flex whitespace-nowrap justify-between border-b-[0.2px] border-b-[#404246] py-[20px] text-[2vw]">
                         <h1 className="w-[35%]">Date : </h1>
-                        <h1 className="w-[65%]">30th Feb, 2024</h1>
+                        <h1 className="w-[65%]">30th Feb, 2022</h1>
                     </span>
                         <span
                             className="flex whitespace-nowrap justify-between border-b-[0.2px] border-b-[#404246] py-[20px] text-[2vw]">
                         <h1 className="w-[35%]">Client : </h1>
-                        <h1 className="w-[65%]">Sibiro</h1>
+                        <h1 className="w-[65%]">Rohan</h1>
                     </span>
                         <span
                             className="flex justify-between border-b-[0.2px] border-b-[#404246] py-[20px] text-[2vw]">

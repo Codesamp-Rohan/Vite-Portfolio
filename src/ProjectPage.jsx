@@ -61,14 +61,14 @@ function Project({ ProjectDetails }) {
 
     function SideImage({ ProjectDetails }) {
         return (
-            <img className="absolute w-[24vw] z-[90] rounded-md border-[1px] border-[#000] shadow-3xl bottom-[0] right-[10%]"
+            <img className="side--img absolute w-[24vw] z-[90] rounded-md border-[1px] border-[#000] shadow-3xl bottom-[0] right-[10%]"
                  src={ProjectDetails.sideImg} alt="side--img"></img>
         )
     }
 
     function ProjectMainImg({ ProjectDetails }) {
         return (
-            <span className="w-[70vw] overflow-hidden">
+            <span className="main--img w-[70vw] overflow-hidden">
             <img className="rounded-3xl scale-[0.97] hover:scale-[1] duration-[300ms]"
                  src={ProjectDetails.img} alt="Project--img"></img>
                 </span>
@@ -78,7 +78,7 @@ function Project({ ProjectDetails }) {
     function ProjectContent({ ProjectDetails }) {
         return (
             <span className="w-[45vw] flex">
-                <h1 className="text-[2vw] text-start text-[#686b72]"><a className="text-[#6e40c9] hover:text-[#97ee81]" href={ProjectDetails.exploreLinks} target="_blank">{ProjectDetails.quickLinksBtn}</a> {ProjectDetails.content}</h1>
+                <h1 className="project--content text-[2vw] text-start text-[#686b72]"><a className="text-[#6e40c9] hover:text-[#97ee81]" href={ProjectDetails.exploreLinks} target="_blank">{ProjectDetails.quickLinksBtn}</a> {ProjectDetails.content}</h1>
             </span>
         )
     }

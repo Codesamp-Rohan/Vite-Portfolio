@@ -31,8 +31,8 @@ export function Footer(){
             </form>
                 </span>
             </div>
-            <footer className="flex justify-center items-center h-[30vh]">
-                <div className="w-[80vw] flex justify-between items-center">
+            <footer className="footer--area flex justify-center items-center h-[30vh]">
+                <div className="footer--area--content w-[80vw] flex justify-between items-center">
                     <a>&copy; Rohan Chaudhary</a>
                     <span
                         className="flex p-[4px] border-[0.3px] rounded-md border-[#6e40c9]  divide-x-[0.1px] divide-[#404246]">

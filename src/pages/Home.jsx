@@ -18,14 +18,11 @@ export default function Home(){
     )
 }
 
-
-
-
 function Main() {
     return (
         <div className="flex AppScroll relative items-center border-b-[0.5px] border-b-[#404246] overflow-hidden">
             <div className="main--title border-r-[0.5px] border-r-[#404246] h-[60vh] px-[2rem] flex items-center">
-                <h1 className="text-[5rem] line-height-[10px] text-[#424769] w-[60vw]">
+                <h1 className="home-section-content text-[5rem] line-height-[10px] text-[#424769] w-[60vw]">
                     <strong className="text-[#eee]">Front-End</strong> and{" "}
                     <strong className="text-[#eee]">web development</strong>, driven by
                     strategy & innovation.
@@ -39,7 +36,7 @@ function Main() {
 function GithubSection() {
     return (
         <>
-            <div className="w-[100vw] flex justify-center py-[100px]">
+            <div className="flex justify-center py-[100px]">
                 <img
                     className="w-[90vw] border-[0.3px] border-[#404246] rounded-3xl"
                     src="/Vite-Portfolio/GithubProfile.png"

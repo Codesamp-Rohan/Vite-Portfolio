@@ -11,7 +11,7 @@ export default function Navbar(){
         <>
             <nav
                 className="w-[100vw] py-[1rem] px-[1rem] flex sticky top-0 z-[99] bg-[#0f1116] items-center justify-between border-b-[0.4px] border-b-[#404246]">
-                <Link to="/" className="flex gap-[10px] items-center">
+                <Link to="/Vite-Portfolio" className="flex gap-[10px] items-center">
                     <img
                         className="w-[30px] h-[30px] object-cover grayscale-[100%] rounded-full"
                         src="/Vite-Portfolio/Rohan.jpg"></img>

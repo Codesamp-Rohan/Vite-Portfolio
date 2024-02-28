@@ -1,0 +1,39 @@
+@media (max-width: 1158px) {
+    .footer--area--content{
+        width: 94vw;
+    }
+    .home-section-content{
+        font-size: 4rem;
+    }
+}
+@media (max-width: 991px){
+    .footer--area--content{
+        flex-direction: column;
+        gap: 14px;
+        align-items: flex-start;
+        width: 80vw;
+    }
+}
+@media (max-width: 860px) {
+    .home-section-content{
+        font-size: 4rem;
+        width: 100vw;
+    }
+    .blur--blob{
+        width: 180px;
+        height: 180px;
+        filter: blur(40px);
+    }
+    .main--img{
+        width: 85vw;
+    }
+    .side--img{
+        width: 28vw;
+    }
+    .project--content{
+        font-size: 3vw;
+    }
+    .project--link {
+        font-size: 3.6vw;
+    }
+}

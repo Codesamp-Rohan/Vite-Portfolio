@@ -1,4 +1,4 @@
-import Navbar from "../Header/Navbar.jsx";
+import {Link} from "react-router-dom";
 
 export function Footer(){
 
@@ -33,9 +33,9 @@ export function Footer(){
             </div>
             <footer className="footer--area flex justify-center items-center h-[30vh]">
                 <div className="footer--area--content w-[80vw] flex justify-between items-center">
-                    <a>&copy; Rohan Chaudhary</a>
+                    <Link to="https://Codesamp-rohan.github.io">&copy; Rohan Chaudhary</Link>
                     <span
-                        className="flex p-[4px] border-[0.3px] rounded-md border-[#6e40c9]  divide-x-[0.1px] divide-[#404246]">
+                        className="links--span flex p-[4px] border-[0.3px] rounded-md border-[#6e40c9]  divide-x-[0.1px] divide-[#404246]">
     {socialLinks.map((links, index) => {
         return (
             <a className="cursor-pointer w-[100px] text-center hover:bg-[#0f1116] hover:border-[#404246] hover:ring-[0.2px] hover:text-[#eee] rounded-sm my-[5px] py-[10px] px-[10px]"
@@ -45,7 +45,7 @@ export function Footer(){
 </span>
                     <span>
                     <button
-                        className="bg-[#6e40c9] border-[0.3px] border-[#6e40c9] py-[15px] px-[40px] rounded-l-md hover:bg-[#97ee81] hover:text-[#000] duration-300">Let's
+                        className="footer--button bg-[#6e40c9] border-[0.3px] border-[#6e40c9] py-[15px] px-[40px] rounded-l-md hover:bg-[#97ee81] hover:text-[#000] duration-300">Let's
                         Connect
                     </button>
                     <button className="back--to--top--btn py-[15px] px-[10px] border-y-[0.2px] border-r-[0.2px] border-[#404246] duration-300 rounded-r-md" onClick={scrollToTop}>BACK TO TOP</button>

@@ -52,7 +52,7 @@ function AboutMe() {
             <div className="border-t-[0.2px] relative border-t-[#404246] mb-[100px] flex justify-center">
         <span className="w-[80vw] divide-y-[0.2px] divide-[#404246]">
           <p className="heading--para text-[18px] py-[30px]">About Me:</p>
-          <h1 className="text-[40px] text-justify text-[#fff] py-[30px]">
+          <h1 className="description text-[40px] text-justify text-[#fff] py-[30px]">
             I am an independent full-service studio creating awesome digital
             experiences and solutions. We are an award winning group
             specializing in branding, design and engineering. Our mission is to

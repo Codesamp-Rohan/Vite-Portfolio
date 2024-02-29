@@ -17,7 +17,7 @@
 @media (max-width: 860px) {
     .home-section-content{
         font-size: 4rem;
-        width: 100vw;
+        width: 90vw;
     }
     .blur--blob{
         width: 180px;
@@ -35,5 +35,42 @@
     }
     .project--link {
         font-size: 3.6vw;
+    }
+}
+@media (max-width: 600px){
+    .home-section-content{
+        font-size: 3rem;
+    }
+    .project--heading{
+        font-size: 14vw;
+    }
+    .blur--blob{
+        display: none;
+    }
+    .side--img{
+        bottom: auto;
+        top: 50%;
+        transform:
+    translateY(-80%);
+        width: 30vw;
+    }
+    .project--content--container{
+        width: 80vw;
+    }
+    .project--content{font-size: 1.3rem}
+    .footer--area{height: 50vh;}
+    .links--span{
+        flex-direction: column;
+    }
+    .footer--button{
+        padding-inline: 10px;
+    }
+}
+@media (max-width: 420px){
+    .home-section-content{
+        font-size: 2.6rem;
+    }
+    .description {
+        font-size: 28px;
     }
 }

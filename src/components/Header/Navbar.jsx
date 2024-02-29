@@ -1,7 +1,12 @@
-import React from "react";
+import React, {useState} from "react";
 import { Link } from "react-router-dom";
 
 export default function Navbar(){
+
+    const [isOpen, setIsOpen] = useState(false);
+
+    const menuOption = () => setIsOpen(!isOpen);
+
     const navLinks = [
         {name: "Home", link: "/Vite-Portfolio/"},
         {name: "Work", link: "/Vite-Portfolio/work"},
@@ -9,8 +14,41 @@ export default function Navbar(){
     ]
     return (
         <>
+            <div className="menu--area" style={{transform: isOpen ? "translate(0, 0)" : "translate(200%, -200%)"}}>
+                <button className="absolute w-[20px] right-[6%] top-[4%]" onClick={menuOption}><img className="invert w-[100%]" src="/Vite-Portfolio/Icons/close.png"></img></button>
+                <ul className="w-full h-full flex flex-col justify-center pl-[100px]">
+                    {navLinks.map((links, index) => {
+                        return (
+                            <li
+                                className="text-[3rem] nav--links"
+                                key={index}>
+                                <Link to={links.link}>{links.name}</Link>
+                            </li>
+                        );
+                    })}
+                </ul>
+                <Link to="/Vite-Portfolio/contact"
+                      className="dot flex items-center mr-[30px] uppercase text-[1.2rem] bg-[#6e40c9] py-[10px] rounded-md px-[10px] absolute bottom-[10%] ml-[100px] hover:text-[#000] hover:bg-[#97ee81] duration-300">
+                    Contact
+                </Link>
+            </div>
             <nav
-                className="w-[100vw] py-[1rem] px-[1rem] flex sticky top-0 z-[99] bg-[#0f1116] items-center justify-between border-b-[0.4px] border-b-[#404246]">
+                className="mobile--nav w-[100vw] py-[1rem] px-[2rem] flex sticky top-0 z-[99] bg-[#0f1116] items-center justify-between border-b-[0.4px] border-b-[#404246]">
+                <Link to="/Vite-Portfolio" className="flex gap-[10px] items-center">
+                    <img
+                        className="w-[30px] h-[30px] object-cover grayscale-[100%] rounded-full"
+                        src="/Vite-Portfolio/Rohan.jpg"></img>
+                    <span>
+            <p>Rohan</p>
+            <p>Chaudhary</p>
+          </span>
+                </Link>
+                <button onClick={menuOption} className="w-[40px]">
+                    <img className="invert" src="/Vite-Portfolio/Icons/menu.png"></img>
+                </button>
+            </nav>
+            <nav
+                className="desktop--nav w-[100vw] py-[1rem] px-[1rem] flex sticky top-0 z-[99] bg-[#0f1116] items-center justify-between border-b-[0.4px] border-b-[#404246]">
                 <Link to="/Vite-Portfolio" className="flex gap-[10px] items-center">
                     <img
                         className="w-[30px] h-[30px] object-cover grayscale-[100%] rounded-full"

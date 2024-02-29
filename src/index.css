@@ -21,6 +21,7 @@
 }
 html{
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 :root {
   font-family: font, 'sans-serif';
@@ -158,4 +159,37 @@ input:focus {
   position: absolute;
   animation: ease-in-out;
   pointer-events: none;
+}
+
+.desktop--nav{
+  display: none;
+}
+.mobile--nav{
+  display: flex;
+}
+.menu--area{
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999;
+  background-color: var(--primary);
+  transition: 800ms;
+  animation: ease-out;
+}
+.nav--links{
+  position: relative;
+  width: fit-content;
+}
+.nav--links::after{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: #eee;
+  transition: 300ms;
+}
+.nav--links:hover::after{
+  width: 100%;
 }

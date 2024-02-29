@@ -65,6 +65,30 @@
     .footer--button{
         padding-inline: 10px;
     }
+    .project--container{
+        margin-block: 50px;
+    }
+    .form--heading{
+        font-size: 14px;
+    }
+    .contact--area{
+        width: 100vw;
+    }
+    .contact--input{
+        width: 80vw;
+    }
+    .contact--button{
+        padding-inline: 40px;
+    }
+    .project--link{
+        font-size: 5vw;
+    }
+    .main--title{
+        padding-inline: 10px;
+    }
+    .AppScroll{
+        height: 40vh;
+    }
 }
 @media (max-width: 420px){
     .home-section-content{

@@ -15,18 +15,18 @@ export function Footer(){
     return (
         <>
             <div className="flex flex-col items-center border-y-[0.2px] border-y-[#404246]">
-                <span className="w-[80vw] border-[0.2px] border-[#404246]">
+                <span className="contact--area w-[80vw] border-[0.2px] border-[#404246]">
         <div className="border-b-[0.2px] border-b-[#404246]">
             <h1 className="heading--para text-[18px] py-[30px] px-[20px]">Contact :</h1>
         </div>
             <form className="py-[30px] px-[20px]">
-                <h1 className="text-[2.8vw]">Wanna know anything? Just text here 😁</h1>
+                <h1 className="form--heading text-[2.8vw]">Wanna know anything? Just text here 😁</h1>
                 <span className="flex flex-col gap-[10px] py-[40px]">
-                <input className="w-[45vw] text-[24px] border-[0.3px] border-[#97ee81] text-[#97ee81] bg-transparent p-[14px] rounded-md"
+                <input className="contact--input w-[45vw] text-[24px] border-[0.3px] border-[#97ee81] text-[#97ee81] bg-transparent p-[14px] rounded-md"
                        placeholder="Name" required type="name"/>
-                    <input className="w-[45vw] text-[24px] border-[0.3px] border-[#97ee81] text-[#97ee81] bg-transparent p-[14px] rounded-md"
+                    <input className="contact--input w-[45vw] text-[24px] border-[0.3px] border-[#97ee81] text-[#97ee81] bg-transparent p-[14px] rounded-md"
                            placeholder="Email address" required type="name"/>
-                    <button className="w-fit bg-[#6e40c9] py-[14px] text-[24px] px-[70px] rounded-md hover:bg-[#97ee81] hover:text-[#000] duration-200">SEND</button>
+                    <button className="contact--button w-fit bg-[#6e40c9] py-[14px] text-[24px] px-[70px] rounded-md hover:bg-[#97ee81] hover:text-[#000] duration-200">SEND</button>
                 </span>
             </form>
                 </span>

@@ -1,6 +1,12 @@
+'use client';
+
 import Navbar from "../components/Header/Navbar.jsx";
+import {useState} from "react";
 
 export function Contact(){
+
+    const [fullName, setFullName] = useState("");
+    const [message, setMessage] = useState("");
 
     const scrollToTop = () => {
         window.scrollTo({
@@ -23,11 +29,25 @@ export function Contact(){
             <form className="py-[30px] px-[20px]">
                 <h1 className="text-[2.8vw]">Wanna know anything? Just text here 😁</h1>
                 <span className="flex flex-col gap-[10px] py-[40px]">
-                <input className="w-[45vw] text-[24px] border-[0.3px] border-[#97ee81] text-[#97ee81] bg-transparent p-[14px] rounded-md"
-                       placeholder="Name" required type="name"/>
-                    <input className="w-[45vw] text-[24px] border-[0.3px] border-[#97ee81] text-[#97ee81] bg-transparent p-[14px] rounded-md"
-                           placeholder="Email address" required type="name"/>
-                    <button className="w-fit bg-[#6e40c9] py-[14px] text-[24px] px-[70px] rounded-md hover:bg-[#97ee81] hover:text-[#000] duration-200">SEND</button>
+                <input
+                    onChange={(e) => setFullName(e.target.value)}
+                    value={fullName}
+                    className="w-[45vw] text-[24px] border-[0.3px] border-[#97ee81] text-[#97ee81] bg-transparent p-[14px] rounded-md"
+                    placeholder="Name"
+                    required
+                    type="text"
+                />
+<input
+    onChange={(e) => setMessage(e.target.value)}
+    value={message}
+    className="w-[45vw] text-[24px] border-[0.3px] border-[#97ee81] text-[#97ee81] bg-transparent p-[14px] rounded-md"
+    placeholder="Email address"
+    required
+    type="text"
+/>
+<button onClick={handleSubmit}
+        className="w-fit bg-[#6e40c9] py-[14px] text-[24px] px-[70px] rounded-md hover:bg-[#97ee81] hover:text-[#000] duration-200">SEND</button>
+
                 </span>
             </form>
                 </span>

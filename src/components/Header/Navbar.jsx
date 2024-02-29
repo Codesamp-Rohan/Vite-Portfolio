@@ -1,22 +1,47 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-export default function Navbar(){
-
+export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
+    const [navbar, setNavbar] = useState(true);
+
+    const handleNavbar = () => {
+        if (window.innerWidth <= 700) {
+            setNavbar(!navbar);
+        }
+    };
 
     const menuOption = () => setIsOpen(!isOpen);
 
     const navLinks = [
-        {name: "Home", link: "/Vite-Portfolio/"},
-        {name: "Work", link: "/Vite-Portfolio/work"},
-        {name: "Services", link: "/Vite-Portfolio/services"},
-    ]
+        { name: "Home", link: "/Vite-Portfolio/" },
+        { name: "Work", link: "/Vite-Portfolio/work" },
+        { name: "Services", link: "/Vite-Portfolio/services" },
+    ];
+
+    React.useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth <= 991) {
+                setNavbar(false);
+            } else {
+                setNavbar(true);
+            }
+        };
+
+        handleResize();
+
+        window.addEventListener("resize", handleResize);
+
+        return () => {
+            window.removeEventListener("resize", handleResize);
+        };
+    }, []);
+
     return (
         <>
             <div className="menu--area" style={{transform: isOpen ? "translate(0, 0)" : "translate(200%, -200%)"}}>
                 <button className="absolute w-[20px] right-[6%] top-[4%]" onClick={menuOption}><img className="invert w-[100%]" src="/Vite-Portfolio/Icons/close.png"></img></button>
-                <ul className="w-full h-full flex flex-col justify-center pl-[100px]">
+                <ul className="w-full h-full flex flex-col justify-center pl-[30px]">
                     {navLinks.map((links, index) => {
                         return (
                             <li
@@ -28,11 +53,13 @@ export default function Navbar(){
                     })}
                 </ul>
                 <Link to="/Vite-Portfolio/contact"
-                      className="dot flex items-center mr-[30px] uppercase text-[1.2rem] bg-[#6e40c9] py-[10px] rounded-md px-[10px] absolute bottom-[10%] ml-[100px] hover:text-[#000] hover:bg-[#97ee81] duration-300">
+                      className="dot flex items-center mr-[30px] uppercase text-[1.2rem] bg-[#6e40c9] py-[10px] rounded-md px-[10px] absolute bottom-[10%] ml-[30px] hover:text-[#000] hover:bg-[#97ee81] duration-300">
                     Contact
                 </Link>
             </div>
             <nav
+                onChange={handleNavbar}
+                style={{display: navbar ? "none" : "flex"}}
                 className="mobile--nav w-[100vw] py-[1rem] px-[2rem] flex sticky top-0 z-[99] bg-[#0f1116] items-center justify-between border-b-[0.4px] border-b-[#404246]">
                 <Link to="/Vite-Portfolio" className="flex gap-[10px] items-center">
                     <img
@@ -48,6 +75,8 @@ export default function Navbar(){
                 </button>
             </nav>
             <nav
+                onChange={handleNavbar}
+                style={{display: navbar ? "flex" : "none"}}
                 className="desktop--nav w-[100vw] py-[1rem] px-[1rem] flex sticky top-0 z-[99] bg-[#0f1116] items-center justify-between border-b-[0.4px] border-b-[#404246]">
                 <Link to="/Vite-Portfolio" className="flex gap-[10px] items-center">
                     <img
@@ -70,7 +99,7 @@ export default function Navbar(){
                     })}
                 </ul>
                 <Link to="/Vite-Portfolio/contact"
-                   className="dot flex items-center mr-[30px] uppercase text-[1.2rem] bg-[#6e40c9] py-[10px] rounded-md px-[10px]">
+                      className="dot flex items-center mr-[30px] uppercase text-[1.2rem] bg-[#6e40c9] py-[10px] rounded-md px-[10px]">
                     Contact
                 </Link>
             </nav>

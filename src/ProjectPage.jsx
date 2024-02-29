@@ -52,7 +52,7 @@ function Project({ ProjectDetails, active, scrollToTop }) {
     function ProjectFirst({ ProjectDetails, active, scrollToTop }) {
 
         return (
-            <div data-value={ProjectDetails.dataValue} className="flex flex-col items-center relative my-[100px]" style={{display: active === parseInt(ProjectDetails.dataValue) ? "none" : "flex"}}>
+            <div data-value={ProjectDetails.dataValue} className="project--container flex flex-col items-center relative my-[100px]" style={{display: active === parseInt(ProjectDetails.dataValue) ? "none" : "flex"}}>
                 <Blob ProjectDetails={ProjectDetails}/>
                 <SideImage ProjectDetails={ProjectDetails}/>
                 <div className="flex flex-col gap-[30px] z-[50]">

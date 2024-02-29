@@ -36,6 +36,23 @@
     .project--link {
         font-size: 3.6vw;
     }
+    .single--project--content{
+        padding-bottom: 50px;
+        padding-inline: 30px;
+    }
+    .single--project--content--container{
+        flex-direction: column;
+        gap: 40px;
+    }
+    .description {
+        width: 100%;
+    }
+    .description--para{
+        font-size: 1.3rem;
+    }
+    .single--project--heading{
+        font-size: 1.3rem;
+    }
 }
 @media (max-width: 600px){
     .home-section-content{
@@ -88,6 +105,9 @@
     }
     .AppScroll{
         height: 40vh;
+    }
+    .single--project--btn{
+        padding: 10px;
     }
 }
 @media (max-width: 420px){

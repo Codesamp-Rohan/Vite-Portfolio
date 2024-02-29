@@ -45,7 +45,7 @@ export function Contact(){
     required
     type="text"
 />
-<button onClick={handleSubmit}
+<button
         className="w-fit bg-[#6e40c9] py-[14px] text-[24px] px-[70px] rounded-md hover:bg-[#97ee81] hover:text-[#000] duration-200">SEND</button>
 
                 </span>

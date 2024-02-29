@@ -43,12 +43,12 @@ const Slider = () => {
     return (
         <div className="relative flex justify-center border-y-[0.2px] border-y-[#404246] my-[100px]">
             <div style={{ marginBottom: '1rem' }}>
-                <button className="absolute bg-[#6e40c9] p-[20px] rounded-md top-[50%] left-[3%] hover:bg-[#273550] translate-y-[-50%]"
+                <button className="single--project--btn absolute bg-[#6e40c9] p-[20px] rounded-md top-[50%] left-[3%] hover:bg-[#273550] translate-y-[-50%]"
                         onClick={() => set((state) => (state === 0 ? images.length - 1 : state - 1))}
                 >
                     &#8592;
                 </button>
-                <button className="absolute bg-[#6e40c9] p-[20px] rounded-md hover:bg-[#273550] top-[50%] right-[3%] translate-y-[-50%]"
+                <button className="project--btn absolute bg-[#6e40c9] p-[20px] rounded-md hover:bg-[#273550] top-[50%] right-[3%] translate-y-[-50%]"
                         onClick={() => set((state) => (state === images.length - 1 ? 0 : state + 1))}
                 >
                     &#8594;
@@ -66,29 +66,29 @@ export default Slider;
 function ProjectContent(){
     return (
         <>
-            <div className="flex justify-center px-[100px] pb-[200px]">
-                <div className="flex justify-between">
+            <div className="single--project--content flex justify-center px-[100px] pb-[200px]">
+                <div className="single--project--content--container flex justify-between">
                     <div className="flex flex-col">
-                        <h1 className="text-[#97ee81]">Project Details</h1>
+                        <h1 className="single--project--heading text-[#97ee81]">Project Details</h1>
                         <span
                             className="flex whitespace-nowrap justify-between border-b-[0.2px] border-b-[#404246] py-[20px] text-[2vw]">
-                        <h1 className="w-[35%]">Date : </h1>
-                        <h1 className="w-[65%]">30th Feb, 2024</h1>
+                        <h1 className="single--project--heading w-[35%]">Date : </h1>
+                        <h1 className="single--project--heading w-[65%]">30th Feb, 2024</h1>
                     </span>
                         <span
                             className="flex whitespace-nowrap justify-between border-b-[0.2px] border-b-[#404246] py-[20px] text-[2vw]">
-                        <h1 className="w-[35%]">Client : </h1>
-                        <h1 className="w-[65%]">Sibiro</h1>
+                        <h1 className="single--project--heading w-[35%]">Client : </h1>
+                        <h1 className="single--project--heading w-[65%]">Sibiro</h1>
                     </span>
                         <span
                             className="flex justify-between border-b-[0.2px] border-b-[#404246] py-[20px] text-[2vw]">
-                        <h1 className="w-[35%]">Services : </h1>
-                        <h1 className="w-[65%]">UI/UX Design, Front-End Developer</h1>
+                        <h1 className="single--project--heading w-[35%]">Services : </h1>
+                        <h1 className="single--project--heading w-[65%]">UI/UX Design, Front-End Developer</h1>
                     </span>
                     </div>
-                    <div className="flex flex-col w-[45%]">
+                    <div className="description flex flex-col w-[45%]">
                         <h1 className="text-[#97ee81]">Description</h1>
-                        <p className="text-[1.6vw]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae risus vel velit laoreet tristique. Nulla euismod eleifendi nunc, ac euismod velit pellentesentes Sed et risus tincidunt, cursus nunc sit amet, bibendum nunc. Sed euismod, justo sed pulvinar feugiat, dui velit viverra velit, vel tristique ante velit et velit. Suspendisse vel libero vel massa volutpat faucibus vel et nibh. Sed et risus tincidunt, cursus nunc sit amet, bibendum nunc. Sed euismod, justo sed pulvinar feugiat, dui velit viverra velit, vel tristique ante velit et velit. Suspendisse vel libero vel massa volutpat faucibus vel et nibh.</p>
+                        <p className="description--para text-[1.6vw]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae risus vel velit laoreet tristique. Nulla euismod eleifendi nunc, ac euismod velit pellentesentes Sed et risus tincidunt, cursus nunc sit amet, bibendum nunc. Sed euismod, justo sed pulvinar feugiat, dui velit viverra velit, vel tristique ante velit et velit. Suspendisse vel libero vel massa volutpat faucibus vel et nibh. Sed et risus tincidunt, cursus nunc sit amet, bibendum nunc. Sed euismod, justo sed pulvinar feugiat, dui velit viverra velit, vel tristique ante velit et velit. Suspendisse vel libero vel massa volutpat faucibus vel et nibh.</p>
                     </div>
                 </div>
             </div>

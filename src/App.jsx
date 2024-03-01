@@ -8,11 +8,15 @@ import {Cosmetics} from "./ProjectPages/cosmetics.jsx";
 import {Docyard} from "./ProjectPages/docyard.jsx";
 import {Quasar} from "./ProjectPages/quasar.jsx";
 import {Portfolio} from "./ProjectPages/portfolio.jsx";
+import {LoadPage} from "./LoadPage.jsx";
+import {MouseFollower} from "./MouseFollower.jsx";
 
 
 export default function App() {
     return (
         <>
+            <LoadPage />
+            <MouseFollower />
             <BrowserRouter>
                 <Routes>
                     <Route path="/Vite-Portfolio/" element={<Home />} />

@@ -10,7 +10,7 @@ export function Footer(){
     }
 
     const socialLinks = [
-        {name : "LinkedIn", url: "/"}, {name :"Github", url: "/"}, {name :"Instagram", url: "/"}, {name :"Gmail", url: "/"}
+        {name : "/Vite-Portfolio/Icons/github.png", url: "/"}, {name :"/Vite-Portfolio/Icons/linkedin.png", url: "/"}, {name :"/Vite-Portfolio/Icons/instagram.png", url: "/"}, {name :"/Vite-Portfolio/Icons/github.png", url: "/"}
     ];
     return (
         <>
@@ -32,17 +32,20 @@ export function Footer(){
                 </span>
             </div>
             <footer className="footer--area flex justify-center items-center h-[30vh]">
+
                 <div className="footer--area--content w-[80vw] flex justify-between items-center">
+                    <span className="links--span flex items-center gap-[30px]">
                     <Link to="https://Codesamp-rohan.github.io">&copy; Rohan Chaudhary</Link>
                     <span
-                        className="links--span flex p-[4px] border-[0.3px] rounded-md border-[#6e40c9]  divide-x-[0.1px] divide-[#404246]">
+                        className="flex p-[4px]">
     {socialLinks.map((links, index) => {
         return (
-            <a className="cursor-pointer w-[100px] text-center hover:bg-[#0f1116] hover:border-[#404246] hover:ring-[0.2px] hover:text-[#eee] rounded-sm my-[5px] py-[10px] px-[10px]"
-               key={index} href={links.url}>{links.name}</a>
+            <a className="cursor-pointer w-[50px] text-center hover:bg-[#0f1116] hover:border-[#404246] hover:ring-[0.2px] hover:text-[#eee] rounded-sm my-[5px] py-[10px] px-[10px]"
+               key={index} href={links.url}><img className="w-20px" src={links.name} alt="icons--img"></img></a>
         )
     })}
 </span>
+                    </span>
                     <span>
                     <button
                         className="footer--button bg-[#6e40c9] border-[0.3px] border-[#6e40c9] py-[15px] px-[40px] rounded-l-md hover:bg-[#97ee81] hover:text-[#000] duration-300">Let's

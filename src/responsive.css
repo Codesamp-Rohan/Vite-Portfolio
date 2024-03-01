@@ -25,10 +25,10 @@
         filter: blur(40px);
     }
     .main--img{
-        width: 85vw;
+        width: 95vw;
     }
     .side--img{
-        width: 28vw;
+        height: 30vh;
     }
     .project--content{
         font-size: 3vw;
@@ -64,12 +64,16 @@
     .blur--blob{
         display: none;
     }
+    .main--img > img{
+        border-radius: 6px;
+    }
     .side--img{
         bottom: auto;
         top: 50%;
         transform:
     translateY(-80%);
         width: 30vw;
+        height: auto;
     }
     .project--content--container{
         width: 80vw;
@@ -78,6 +82,14 @@
     .footer--area{height: 50vh;}
     .links--span{
         flex-direction: column;
+        gap: 0;
+        align-items: flex-start;
+    }
+    .links--span > span{
+        padding: 0;
+    }
+    .footer--area--content{
+        gap: 100px;
     }
     .footer--button{
         padding-inline: 10px;

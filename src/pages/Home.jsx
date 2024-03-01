@@ -3,13 +3,44 @@ import {ProjectPage} from "../ProjectPage.jsx";
 import Navbar from "../components/Header/Navbar.jsx";
 import {Footer} from "../components/Footer/Footer.jsx";
 import {Link} from "react-router-dom";
+import {useEffect, useState} from "react";
 
 export default function Home(){
+
+    const [pageSize, setPageSize] = useState(false);
+
+    const handleGithubImg = () => {
+        if (pageSize) {
+            setPageSize(true);
+        } else {
+            setPageSize(false);
+        }
+    }
+
+    useEffect(() => {
+        const handleSize = () => {
+            if(window.innerWidth >= 640){
+                setPageSize(true);
+            } else {
+                setPageSize(false);
+            }
+        };
+
+        handleSize();
+
+        window.addEventListener("resize", handleSize);
+
+        return () => {
+            window.addEventListener("resize", handleSize);
+        }
+
+    }, []);
+
     return (
         <>
             <Navbar />
             <Main />
-            <GithubSection />
+            <GithubSection handleGithubImg={handleGithubImg} pageSize={pageSize}/>
             <AboutMe />
             <TechMarquee />
             <ProjectPage />
@@ -33,13 +64,15 @@ function Main() {
     );
 }
 
-function GithubSection() {
+function GithubSection({ handleGithubImg, pageSize }) {
     return (
         <>
             <div className="flex justify-center py-[100px]">
                 <img
-                    className="w-[90vw] border-[0.3px] border-[#404246] rounded-3xl"
-                    src="/Vite-Portfolio/GithubProfile.png"
+                    className="border-[0.3px] border-[#404246] rounded-3xl"
+                    style={{width: pageSize? "90vw" : "70vw"}}
+                    src={pageSize ? "/Vite-Portfolio/GithubProfile.png" : "/Vite-Portfolio/github--mobile.jpg"}
+                    onChange={handleGithubImg}
                     alt="images"></img>
             </div>
         </>

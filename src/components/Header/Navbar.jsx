@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
+    const menuOption = () => setIsOpen(!isOpen);
+
     const [navbar, setNavbar] = useState(true);
 
     const handleNavbar = () => {
@@ -11,7 +13,6 @@ export default function Navbar() {
         }
     };
 
-    const menuOption = () => setIsOpen(!isOpen);
 
     const navLinks = [
         { name: "Home", link: "/Vite-Portfolio/" },

@@ -79,7 +79,11 @@
         width: 80vw;
     }
     .project--content{font-size: 1.3rem}
-    .footer--area{height: 50vh;}
+    .footer--area{
+        height: 30vh;
+        justify-content: flex-start;
+        padding-left: 15px;
+    }
     .links--span{
         flex-direction: column;
         gap: 0;
@@ -89,7 +93,7 @@
         padding: 0;
     }
     .footer--area--content{
-        gap: 100px;
+        gap: 30px;
     }
     .footer--button{
         padding-inline: 10px;

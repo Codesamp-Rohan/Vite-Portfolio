@@ -1,10 +1,39 @@
-import { useState } from 'react';
+import {useEffect, useState} from 'react';
 import { useSpring, animated } from 'react-spring';
 import {ProjectPage} from "../ProjectPage.jsx";
 import Navbar from "../components/Header/Navbar.jsx";
 import {Footer} from "../components/Footer/Footer.jsx";
 
 export function Portfolio(){
+
+    const [pageSize, setPageSize] = useState(true);
+
+    const handleSize = () => {
+        if(window.innerWidth >= 600){
+            setPageSize(true);
+        } else {
+            setPageSize(false);
+        }
+    }
+
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth <= 991) {
+                setPageSize(false);
+            } else {
+                setPageSize(true);
+            }
+        };
+
+        handleResize();
+
+        window.addEventListener("resize", handleResize);
+
+        return () => {
+            window.removeEventListener("resize", handleResize);
+        };
+    }, []);
+
     let active = 3;
     return (
         <>
@@ -12,13 +41,13 @@ export function Portfolio(){
             <div>
                 <div className="h-[60vh] top--section relative border-b-[1px] border-b-[#404246]">
                     <span className="project--img z-[20] w-[100%] h-[100%] absolute text-[#000] top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]"></span>
-                    <img className="project--img absolute h-full w-full object-cover z-[19] brightness-[70%]" src="/Vite-Portfolio/Projects/portfolio.png" alt="bg-img"></img>
+                    <img className="project--img absolute h-full w-full object-cover z-[19]" src="/Vite-Portfolio/Projects/portfolio.png" alt="bg-img"></img>
                     <span className="absolute w-[100%] h-[100%] z-[50] flex items-end px-[30px]">
                         <h1 className="text-[10vw]">PORTFOLIO</h1>
                     </span>
                 </div>
             </div>
-            <Slider />
+            <Slider pageSize={pageSize} handleSize={handleSize}/>
             <ProjectContent />
             <ProjectPage active={active}/>
             <Footer />
@@ -26,7 +55,7 @@ export function Portfolio(){
     )
 }
 
-const Slider = () => {
+const Slider = ({ pageSize, handleSize }) => {
     // Initialize the state for the current slide index
     const [index, set] = useState(0);
 
@@ -55,11 +84,12 @@ const Slider = () => {
                 </button>
             </div>
             <animated.div style={props}>
-                {index !== -1 && index !== images.length && <img className="w-[80vw] rounded-xl" src={images[index]} alt={`Image ${index + 1}`} />}
+                {index !== -1 && index !== images.length && <img onChange={handleSize} style={{width: pageSize ? "80vw" : "95vw", paddingBlock: pageSize ? "" : "50px"}} className="rounded-xl" src={images[index]} alt={`Image ${index + 1}`} />}
             </animated.div>
         </div>
     );
 };
+
 
 export default Slider;
 

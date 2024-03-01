@@ -48,7 +48,7 @@ const Slider = () => {
                 >
                     &#8592;
                 </button>
-                <button className="project--btn absolute bg-[#6e40c9] p-[20px] rounded-md hover:bg-[#273550] top-[50%] right-[3%] translate-y-[-50%]"
+                <button className="single--project--btn absolute bg-[#6e40c9] p-[20px] rounded-md hover:bg-[#273550] top-[50%] right-[3%] translate-y-[-50%]"
                         onClick={() => set((state) => (state === images.length - 1 ? 0 : state + 1))}
                 >
                     &#8594;

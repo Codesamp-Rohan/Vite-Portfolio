@@ -125,6 +125,20 @@ body {
     transform: rotate(360deg);
   }
 }
+.rotate--svg--at--heading {
+  animation: rotatePlanet 33s infinite linear;
+}
+@keyframes rotatePlanet {
+  0%{
+    transform: rotate(0deg);
+  }
+  50%{
+    transform: rotate(180deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
 .blur--blob{
   filter: blur(100px);
 }

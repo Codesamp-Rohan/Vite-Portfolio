@@ -58,6 +58,7 @@ function Main() {
                     <strong className="text-[#eee]">web development</strong>, driven by
                     strategy & innovation.
                 </h1>
+            <img className="w-[1200px] rotate--svg--at--heading z-[-1] opacity-[30%] absolute top-[10%] left-[-40%]" src="Vite-Portfolio/Icons/pattern--2.svg" alt="pattern--icons"></img>
             </div>
             <div className="w-[50vw] homesection--ball absolute right-[-50%] top-[20%] translate-x-[-50%] z-[-1] border-[0.5px] border-[#404246] rounded-full h-[600px] bg-[#0f1116] grayscale-[60%]"></div>
         </div>
@@ -70,7 +71,7 @@ function GithubSection({ handleGithubImg, pageSize }) {
             <div className="flex justify-center py-[100px]">
                 <img
                     className="border-[0.3px] border-[#404246] rounded-3xl"
-                    style={{width: pageSize? "90vw" : "70vw"}}
+                    style={{width: pageSize? "80vw" : "90vw"}}
                     src={pageSize ? "/Vite-Portfolio/GithubProfile.png" : "/Vite-Portfolio/github--mobile.jpg"}
                     onChange={handleGithubImg}
                     alt="images"></img>

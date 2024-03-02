@@ -4,8 +4,15 @@ import Navbar from "../components/Header/Navbar.jsx";
 import {Footer} from "../components/Footer/Footer.jsx";
 import {Link} from "react-router-dom";
 import {useEffect, useState} from "react";
+import PageTransition from "./PageTransition.jsx";
 
 export default function Home(){
+
+    const [isActive, setIsActive] = useState(false);
+
+    const handleActive = () => {
+        setIsActive(true);
+    }
 
     const [pageSize, setPageSize] = useState(false);
 
@@ -38,7 +45,8 @@ export default function Home(){
 
     return (
         <>
-            <Navbar />
+            <PageTransition isActive={isActive}/>
+            <Navbar handleActive={handleActive}/>
             <Main />
             <GithubSection handleGithubImg={handleGithubImg} pageSize={pageSize}/>
             <AboutMe />
@@ -58,7 +66,7 @@ function Main() {
                     <strong className="text-[#eee]">web development</strong>, driven by
                     strategy & innovation.
                 </h1>
-            <img className="w-[1200px] rotate--svg--at--heading z-[-1] opacity-[30%] absolute top-[10%] left-[-40%]" src="Vite-Portfolio/Icons/pattern--2.svg" alt="pattern--icons"></img>
+            <img className="w-[1200px] rotate--svg--at--heading z-[-1] opacity-[10%] absolute top-[10%] left-[-40%]" src="Vite-Portfolio/Icons/pattern--2.svg" alt="pattern--icons"></img>
             </div>
             <div className="w-[50vw] homesection--ball absolute right-[-50%] top-[20%] translate-x-[-50%] z-[-1] border-[0.5px] border-[#404246] rounded-full h-[600px] bg-[#0f1116] grayscale-[60%]"></div>
         </div>
@@ -68,7 +76,7 @@ function Main() {
 function GithubSection({ handleGithubImg, pageSize }) {
     return (
         <>
-            <div className="flex justify-center py-[100px]">
+            <div className="relative flex justify-center py-[100px]">
                 <img
                     className="border-[0.3px] border-[#404246] rounded-3xl"
                     style={{width: pageSize? "80vw" : "90vw"}}

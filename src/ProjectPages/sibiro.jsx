@@ -1,10 +1,39 @@
-import { useState } from 'react';
+import {useEffect, useState} from 'react';
 import { useSpring, animated } from 'react-spring';
 import {ProjectPage} from "../ProjectPage.jsx";
 import Navbar from "../components/Header/Navbar.jsx";
 import {Footer} from "../components/Footer/Footer.jsx";
 
 export function Sibiro(){
+
+    const [pageSize, setPageSize] = useState(true);
+
+    const handleSize = () => {
+        if(window.innerWidth >= 600){
+            setPageSize(true);
+        } else {
+            setPageSize(false);
+        }
+    }
+
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth <= 991) {
+                setPageSize(false);
+            } else {
+                setPageSize(true);
+            }
+        };
+
+        handleResize();
+
+        window.addEventListener("resize", handleResize);
+
+        return () => {
+            window.removeEventListener("resize", handleResize);
+        };
+    }, []);
+
     let active = 1;
     return (
         <>
@@ -18,7 +47,7 @@ export function Sibiro(){
                     </span>
                 </div>
             </div>
-            <Slider />
+            <Slider pageSize={pageSize} handleSize={handleSize}/>
             <ProjectContent />
             <ProjectPage active={active}/>
             <Footer />
@@ -26,7 +55,7 @@ export function Sibiro(){
     )
 }
 
-const Slider = () => {
+const Slider = ({ pageSize, handleSize }) => {
     // Initialize the state for the current slide index
     const [index, set] = useState(0);
 
@@ -55,7 +84,10 @@ const Slider = () => {
                 </button>
             </div>
             <animated.div style={props}>
-                {index !== -1 && index !== images.length && <img className="w-[80vw] rounded-xl" src={images[index]} alt={`Image ${index + 1}`} />}
+                {index !== -1 && index !== images.length && <img onChange={handleSize} style={{
+                    width: pageSize ? "80vw" : "95vw",
+                    paddingBlock: pageSize ? "" : "50px"
+                }} className="rounded-xl" src={images[index]} alt={`Image ${index + 1}`}/>}
             </animated.div>
         </div>
     );
@@ -63,13 +95,13 @@ const Slider = () => {
 
 export default Slider;
 
-function ProjectContent(){
+function ProjectContent() {
     return (
         <>
             <div className="single--project--content flex justify-center px-[100px] pb-[200px]">
                 <div className="single--project--content--container flex justify-between">
                     <div className="flex flex-col">
-                        <h1 className="single--project--heading text-[#97ee81]">Project Details</h1>
+                    <h1 className="single--project--heading text-[#97ee81]">Project Details</h1>
                         <span
                             className="flex whitespace-nowrap justify-between border-b-[0.2px] border-b-[#404246] py-[20px] text-[2vw]">
                         <h1 className="single--project--heading w-[35%]">Date : </h1>

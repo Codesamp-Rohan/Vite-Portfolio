@@ -2,6 +2,7 @@
 
 import Navbar from "../components/Header/Navbar.jsx";
 import {useState} from "react";
+import PageTransition from "./PageTransition.jsx";
 
 export function Contact(){
 
@@ -20,6 +21,7 @@ export function Contact(){
     ];
     return (
         <>
+            <PageTransition />
             <Navbar />
             <div className="flex flex-col items-center border-y-[0.2px] border-y-[#404246]">
                 <span className="w-[80vw] border-[0.2px] border-[#404246]">

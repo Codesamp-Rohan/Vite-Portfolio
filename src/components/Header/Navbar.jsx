@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-export default function Navbar() {
+export default function Navbar({handleActive}) {
+
     const [isOpen, setIsOpen] = useState(false);
     const menuOption = () => setIsOpen(!isOpen);
 
@@ -94,7 +95,7 @@ export default function Navbar() {
                             <li
                                 className="cursor-pointer hover:bg-[#0f1116] hover:border-[#404246] hover:ring-[0.2px] hover:text-[#eee] rounded-sm my-[5px] py-[10px] px-[10px]"
                                 key={index}>
-                                <Link to={links.link}>{links.name}</Link>
+                                <Link onClick={handleActive} to={links.link}>{links.name}</Link>
                             </li>
                         );
                     })}

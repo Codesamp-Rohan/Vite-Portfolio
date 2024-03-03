@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import ThemeBtn from "../themeBtn.jsx";
 
-export default function Navbar({handleActive}) {
+export default function Navbar({handleActive, isTheme, setIsTheme}) {
+
 
     const [isOpen, setIsOpen] = useState(false);
     const menuOption = () => setIsOpen(!isOpen);
@@ -100,10 +102,13 @@ export default function Navbar({handleActive}) {
                         );
                     })}
                 </ul>
+                <span className="flex gap-[20px]">
+                    <ThemeBtn isTheme={isTheme} setIsTheme={setIsTheme}/>
                 <Link to="/Vite-Portfolio/contact"
                       className="dot flex items-center mr-[30px] uppercase text-[1.2rem] bg-[#6e40c9] py-[10px] rounded-md px-[10px]">
                     Contact
                 </Link>
+                </span>
             </nav>
         </>
     )

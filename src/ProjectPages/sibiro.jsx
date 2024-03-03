@@ -1,6 +1,6 @@
 import {useEffect, useState} from 'react';
 import { useSpring, animated } from 'react-spring';
-import {ProjectPage} from "../ProjectPage.jsx";
+import {ProjectPage} from "../components/ProjectPage.jsx";
 import Navbar from "../components/Header/Navbar.jsx";
 import {Footer} from "../components/Footer/Footer.jsx";
 

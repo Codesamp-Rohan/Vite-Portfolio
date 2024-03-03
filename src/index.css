@@ -41,6 +41,10 @@ html{
   --border--secondary: #273550;
   --purple: #6e40c9;
   --green: #97ee81;
+
+  l--primary: #7743DB;
+  l--secondary: #F7EFE5;
+  l--border: #cbcbcb;
 }
 * {
   margin: 0;
@@ -111,6 +115,12 @@ body {
   background-image: linear-gradient(to right, var(--primary) 5%, transparent 10%, transparent 50%, transparent 90%, var(--primary) 95%);
   z-index: 90;
 }
+.l--marquee-fade {
+  position: absolute;
+  top: 0;
+  background-image: linear-gradient(to right, #f6f8fa 5%, transparent 10%, transparent 50%, transparent 90%, #f6f8fa 95%);
+  z-index: 90;
+}
 .rotate--svg {
   animation: rotatePlanet 3s infinite linear;
 }
@@ -156,6 +166,22 @@ body {
   transition: 300ms;
 }
 .project--link:hover::after{
+  width: 100%;
+}
+.l--project--link{
+  position: relative;
+}
+.l--project--link::after{
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+  transition: 300ms;
+}
+.l--project--link:hover::after{
   width: 100%;
 }
 input:focus {

@@ -1,7 +1,7 @@
 import {Link} from "react-router-dom";
 
 
-export function ProjectPage({ active }){
+export function ProjectPage({ active, isTheme }){
 
     const scrollToTop = () => {
         window.scrollTo({
@@ -21,44 +21,44 @@ export function ProjectPage({ active }){
     return (
         <>
             <ProjectPageHeading />
-            <Project ProjectDetails={projectDetails} scrollToTop={scrollToTop} active={active}/>
+            <Project isTheme={isTheme} ProjectDetails={projectDetails} scrollToTop={scrollToTop} active={active}/>
         </>
     )
 }
 
 function ProjectPageHeading(){
     return (
-        <div className="flex border-y-[0.2px] border-[#404246] overflow-hidden relative">
-            <h1 className="text-[9vw] p-[10px] border-r-[0.2px] border-[#404246]">SELECTED <h1
-                className="pl-[25vw]">WORKS</h1></h1>
-            <img className="rotate--svg absolute top-[-50%] right-[-20%] translate-x-[20%]"
+        <div className="flex border-y-[0.2px] border-[#404246] overflow-hidden relative dark:border-[#cbcbcb] dark:border-y-[1px] dark:bg-[#fff]">
+            <h1 className="text-[9vw] p-[10px] border-r-[0.2px] border-[#404246] dark:border-r-[#cbcbcb] dark:text-[#888] dark:border-r-[1px]">SELECTED <h1
+                className="pl-[25vw] dark:text-[#888]">WORKS</h1></h1>
+            <img className="rotate--svg absolute top-[-50%] right-[-20%] translate-x-[20%] flex z-[2] dark:invert"
                  src="https://github.githubassets.com/assets/shape-0-df97fa6b0c27.svg" alt="side--image"></img>
         </div>
     )
 }
 
 
-function Project({ ProjectDetails, active, scrollToTop }) {
+function Project({ ProjectDetails, active, scrollToTop, isTheme }) {
     return (
         <>
-            <ProjectFirst scrollToTop={scrollToTop} active={active} ProjectDetails={ProjectDetails[0]}/>
-            <ProjectFirst scrollToTop={scrollToTop} active={active} ProjectDetails={ProjectDetails[1]}/>
-            <ProjectFirst scrollToTop={scrollToTop} active={active} ProjectDetails={ProjectDetails[2]}/>
-            <ProjectFirst scrollToTop={scrollToTop} active={active} ProjectDetails={ProjectDetails[3]}/>
-            <ProjectFirst scrollToTop={scrollToTop} active={active} ProjectDetails={ProjectDetails[4]}/>
+            <ProjectFirst scrollToTop={scrollToTop} active={active} ProjectDetails={ProjectDetails[0]} isTheme={isTheme}/>
+            <ProjectFirst scrollToTop={scrollToTop} active={active} ProjectDetails={ProjectDetails[1]} isTheme={isTheme}/>
+            <ProjectFirst scrollToTop={scrollToTop} active={active} ProjectDetails={ProjectDetails[2]} isTheme={isTheme}/>
+            <ProjectFirst scrollToTop={scrollToTop} active={active} ProjectDetails={ProjectDetails[3]} isTheme={isTheme}/>
+            <ProjectFirst scrollToTop={scrollToTop} active={active} ProjectDetails={ProjectDetails[4]} isTheme={isTheme}/>
         </>
     );
 
-    function ProjectFirst({ ProjectDetails, active, scrollToTop }) {
+    function ProjectFirst({ ProjectDetails, active, scrollToTop, isTheme }) {
 
         return (
-            <div data-value={ProjectDetails.dataValue} className="project--container flex flex-col items-center relative my-[100px]" style={{display: active === parseInt(ProjectDetails.dataValue) ? "none" : "flex"}}>
+            <div data-value={ProjectDetails.dataValue} className="project--container flex flex-col items-center relative py-[100px] dark:bg-[#fff]" style={{display: active === parseInt(ProjectDetails.dataValue) ? "none" : "flex"}}>
                 <Blob ProjectDetails={ProjectDetails}/>
                 <SideImage ProjectDetails={ProjectDetails}/>
                 <div className="flex flex-col gap-[30px] z-[50]">
                     <ProjectMainImg ProjectDetails={ProjectDetails}/>
                     <ProjectContent scrollToTop={scrollToTop} ProjectDetails={ProjectDetails}/>
-                    <ProjectLinks ProjectDetails={ProjectDetails}/>
+                    <ProjectLinks ProjectDetails={ProjectDetails} isTheme={isTheme}/>
                 </div>
             </div>
         )
@@ -83,7 +83,7 @@ function Project({ ProjectDetails, active, scrollToTop }) {
     function ProjectMainImg({ ProjectDetails }) {
         return (
             <span className="main--img w-[70vw] overflow-hidden">
-            <img className="rounded-3xl scale-[0.97] hover:scale-[1] duration-[300ms]"
+            <img className="rounded-3xl scale-[0.97] hover:scale-[1] duration-[300ms] border-[0.5px] border-[#000]"
                  src={ProjectDetails.img} alt="Project--img"></img>
                 </span>
         )
@@ -92,14 +92,15 @@ function Project({ ProjectDetails, active, scrollToTop }) {
     function ProjectContent({ ProjectDetails }) {
         return (
             <span className="project--content--container w-[45vw] flex">
-                <h1 className="project--content text-[2vw] text-start text-[#686b72]"><Link className="text-[#6e40c9] hover:text-[#97ee81]" onClick={scrollToTop} to={ProjectDetails.exploreLinks}>{ProjectDetails.quickLinksBtn}</Link> {ProjectDetails.content}</h1>
+                <h1 className="text-[2vw] text-start text-[#686b72]"><Link className="text-[#6e40c9] hover:text-[#97ee81]" onClick={scrollToTop} to={ProjectDetails.exploreLinks}>{ProjectDetails.quickLinksBtn}</Link> {ProjectDetails.content}</h1>
             </span>
         )
     }
 
-    function ProjectLinks({ ProjectDetails }) {
+    function ProjectLinks({ ProjectDetails, isTheme }) {
         return (
-            <Link className="project--link text-[2.4vw] w-fit" target="_blank" href={ProjectDetails.exploreLinks}>{ProjectDetails.exploreLinksBtn}</Link>
+            <Link className={`text-[2.4vw] w-fit dark:text-[#000] ${isTheme ? "project--link" : "l--project--link"}`} target="_blank" href={ProjectDetails.exploreLinks}>{ProjectDetails.exploreLinksBtn}</Link>
+
         )
     }
 }

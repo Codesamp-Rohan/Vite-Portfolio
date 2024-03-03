@@ -62,7 +62,7 @@ export default function Home(){
 function Main() {
     return (
         <div className="flex AppScroll relative items-center border-b-[0.5px] border-b-[#404246] overflow-hidden dark:bg-[#fff] dark:border-[1px] dark:border-b-[#cbcbcb]">
-            <div className="main--title border-r-[0.5px] border-r-[#404246] h-[60vh] px-[2rem] flex items-center dark:border-r-[#cbcbcb] dark:border-r-[1px]">
+            <div className="main--title border-r-[0.5px] border-r-[#404246] h-[60vh] px-[2rem] flex items-center dark:border-r-[#cbcbcb] dark:border-r-[1px] z-[30]">
                 <h1 className="home-section-content text-[5rem] line-height-[10px] text-[#424769] w-[60vw] dark:text-[#888]">
                     <strong className="text-[#eee] dark:text-[#7743DB]">Front-End</strong> and{" "}
                     <strong className="text-[#eee] dark:text-[#7743DB]">web development</strong>, driven by
@@ -75,7 +75,7 @@ function Main() {
     );
 }
 
-function GithubSection({ handleGithubImg, pageSize, isTheme, setIsTheme }) {
+function GithubSection({ handleGithubImg, pageSize, isTheme }) {
 
 
     return (

@@ -1,8 +1,27 @@
-import React, { useState } from "react";
+import React, {useEffect, useState} from "react";
 import { Link } from "react-router-dom";
 import ThemeBtn from "../themeBtn.jsx";
 
 export default function Navbar({ isTheme, setIsTheme }) {
+
+    const [isFixed, setIsFixed] = useState(false);
+
+    const handleScroll = () => {
+        if(window.scrollY > 100) {
+            setIsFixed(true);
+        } else {
+            setIsFixed(false);
+        }
+    }
+
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
+
     const [isOpen, setIsOpen] = useState(false);
     const menuOption = () => setIsOpen(!isOpen);
 
@@ -58,18 +77,18 @@ export default function Navbar({ isTheme, setIsTheme }) {
                     Contact
                 </Link>
             </div>
-            <MobileNav handleNavbar={handleNavbar} isTheme={isTheme} setIsTheme={setIsTheme} navbar={navbar} menuOption={menuOption}/>
-            <DesktopNav handleNavbar={handleNavbar} isTheme={isTheme} setIsTheme={setIsTheme} navLinks={navLinks} navbar={navbar} menuOption={menuOption}/>
+            <MobileNav handleNavbar={handleNavbar} isTheme={isTheme} setIsTheme={setIsTheme} navbar={navbar} menuOption={menuOption} isFixed={isFixed}/>
+            <DesktopNav handleNavbar={handleNavbar} isTheme={isTheme} setIsTheme={setIsTheme} navLinks={navLinks} navbar={navbar} menuOption={menuOption} isFixed={isFixed}/>
         </>
     )
 }
 
-function MobileNav({ handleNavbar, navbar, isTheme, setIsTheme, menuOption }){
+function MobileNav({ handleNavbar, navbar, isTheme, setIsTheme, menuOption, isFixed }){
     return (
         <nav
             onChange={handleNavbar}
-            style={{display: navbar ? "none" : "flex"}}
-            className="mobile--nav w-[100vw] py-[1rem] px-[2rem] flex sticky top-0 z-[99] backdrop-blur-[10px] items-center justify-between border-b-[0.4px] border-b-[#404246] dark:backdrop-blur-[10px] dark:text-[#000]">
+            style={{display: navbar ? "none" : "flex", position: isFixed ? "fixed" : "sticky"}}
+            className="mobile--nav w-[100vw] py-[1rem] px-[2rem] flex top-0 z-[99] backdrop-blur-[10px] items-center justify-between border-b-[0.4px] border-b-[#404246] dark:backdrop-blur-[10px] dark:text-[#000] duration-300">
             <Link to="/Vite-Portfolio" className="flex gap-[10px] items-center">
                 <img
                     className="w-[30px] h-[30px] object-cover grayscale-[100%] rounded-full"
@@ -91,12 +110,12 @@ function MobileNav({ handleNavbar, navbar, isTheme, setIsTheme, menuOption }){
 }
 
 
-function DesktopNav({ handleNavbar, navbar, navLinks, isTheme, setIsTheme, handleActive, menuOption }){
+function DesktopNav({ handleNavbar, navbar, navLinks, isTheme, setIsTheme, handleActive, menuOption, isFixed }){
     return (
         <nav
             onChange={handleNavbar}
-            style={{display: navbar ? "flex" : "none"}}
-            className="desktop--nav w-[100vw] py-[1rem] px-[1rem] flex sticky top-0 z-[99] backdrop-blur-[10px] items-center justify-between border-b-[0.4px] border-b-[#404246] dark:backdrop-blur-[10px] dark:text-[#000]">
+            style={{display: navbar ? "flex" : "none", position: isFixed ? "fixed" : "sticky"}}
+            className="desktop--nav w-[100vw] py-[1rem] px-[1rem] flex top-0 z-[99] backdrop-blur-[10px] items-center justify-between border-b-[0.4px] border-b-[#404246] dark:backdrop-blur-[10px] dark:bg-[#eee] dark:text-[#000] duration-300">
             <Link to="/Vite-Portfolio" className="flex gap-[10px] items-center">
                 <img
                     className="w-[30px] h-[30px] object-cover grayscale-[100%] rounded-full"

@@ -41,7 +41,7 @@ export default function Home(){
 
     return (
         <>
-            {/*<PageTransition isActive={isActive}/>*/}
+            <PageTransition/>
             <Navbar isTheme={isTheme} setIsTheme={setIsTheme}/>
             <Main />
             <GithubSection handleGithubImg={handleGithubImg} pageSize={pageSize} isTheme={isTheme} setIsTheme={setIsTheme}/>
@@ -76,17 +76,17 @@ function GithubSection({ handleGithubImg, pageSize, isTheme }) {
         <>
             <div className="relative flex justify-center py-[100px] dark:bg-[#fff]">
                 {
-                    isTheme ? <img
+                    isTheme ? (<img
                         className="border-[0.3px] border-[#404246] rounded-3xl"
                         style={{width: pageSize ? "80vw" : "90vw"}}
                         src={pageSize ? "/Vite-Portfolio/GithubProfile.png" : "/Vite-Portfolio/github--mobile.jpg"}
                         onChange={handleGithubImg}
-                        alt="images"></img> : <img
+                        alt="images"></img> ): (<img
                         className="border-[0.3px] border-[#404246] rounded-3xl dark:shadow-2xl"
                         style={{width: pageSize ? "80vw" : "90vw"}}
                         src={pageSize ? "/Vite-Portfolio/light--GithubProfile.png" : "/Vite-Portfolio/github--mobile.jpg"}
                         onChange={handleGithubImg}
-                        alt="images"></img>
+                        alt="images"></img>)
                 }
             </div>
         </>

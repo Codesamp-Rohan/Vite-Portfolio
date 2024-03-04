@@ -65,11 +65,11 @@
     .project--content--container > h1{
         font-size: 1.4rem;
     }
-    .project--link{
+    .project--link, .l--project--link{
         font-size: 1.7rem;
     }
     .project--container{
-        margin-block: 40px;
+        padding-block: 30px;
     }
 }
 @media (max-width: 600px){
@@ -117,8 +117,7 @@
         padding-inline: 10px;
     }
     .project--container{
-        margin-block: 50px;
-        padding: 0;
+        padding-block: 30px;
     }
     .form--heading{
         font-size: 14px;
@@ -139,7 +138,7 @@
         padding-inline: 10px;
     }
     .AppScroll{
-        height: 40vh;
+        height: 60vh;
     }
     .single--project--btn{
         padding: 10px;

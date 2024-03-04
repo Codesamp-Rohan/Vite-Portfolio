@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import ThemeBtn from "../themeBtn.jsx";
 
-export default function Navbar({ handleActive, isTheme, setIsTheme }) {
+export default function Navbar({ isTheme, setIsTheme }) {
     const [isOpen, setIsOpen] = useState(false);
     const menuOption = () => setIsOpen(!isOpen);
 
@@ -58,58 +58,76 @@ export default function Navbar({ handleActive, isTheme, setIsTheme }) {
                     Contact
                 </Link>
             </div>
-            <nav
-                onChange={handleNavbar}
-                style={{ display: navbar ? "none" : "flex" }}
-                className="mobile--nav w-[100vw] py-[1rem] px-[2rem] flex sticky top-0 z-[99] bg-[#0f1116] items-center justify-between border-b-[0.4px] border-b-[#404246] dark:bg-[#eee] text-[#000]">
-                <Link to="/Vite-Portfolio" className="flex gap-[10px] items-center">
-                    <img
-                        className="w-[30px] h-[30px] object-cover grayscale-[100%] rounded-full"
-                        src="/Vite-Portfolio/Rohan.jpg"></img>
-                    <span>
+            <MobileNav handleNavbar={handleNavbar} isTheme={isTheme} setIsTheme={setIsTheme} navbar={navbar} menuOption={menuOption}/>
+            <DesktopNav handleNavbar={handleNavbar} isTheme={isTheme} setIsTheme={setIsTheme} navLinks={navLinks} navbar={navbar} menuOption={menuOption}/>
+        </>
+    )
+}
+
+function MobileNav({ handleNavbar, navbar, isTheme, setIsTheme, menuOption }){
+    return (
+        <nav
+            onChange={handleNavbar}
+            style={{display: navbar ? "none" : "flex"}}
+            className="mobile--nav w-[100vw] py-[1rem] px-[2rem] flex sticky top-0 z-[99] backdrop-blur-[10px] items-center justify-between border-b-[0.4px] border-b-[#404246] dark:backdrop-blur-[10px] dark:text-[#000]">
+            <Link to="/Vite-Portfolio" className="flex gap-[10px] items-center">
+                <img
+                    className="w-[30px] h-[30px] object-cover grayscale-[100%] rounded-full"
+                    src="/Vite-Portfolio/Rohan.jpg"></img>
+                <span>
         <p>Rohan</p>
         <p>Chaudhary</p>
       </span>
-                </Link>
-                <span className="flex items-center gap-[20px] dark:text-[#000] text-[#fff]">
+            </Link>
+            <span className="flex items-center gap-[20px] dark:text-[#000] text-[#fff]">
                               <ThemeBtn isTheme={isTheme} setIsTheme={setIsTheme}/>
                 <button onClick={menuOption} className="w-[40px]">
-                    <img className="invert dark:invert-0" src="/Vite-Portfolio/Icons/menu.png"></img>
+                    <img className="invert dark:invert-0" src="/Vite-Portfolio/Icons/menu.png"
+                    alt="btn"></img>
                 </button>
                 </span>
-            </nav>
-            <nav
-                onChange={handleNavbar}
-                style={{ display: navbar ? "flex" : "none" }}
-                className="desktop--nav w-[100vw] py-[1rem] px-[1rem] flex sticky top-0 z-[99] bg-[#0f1116] items-center justify-between border-b-[0.4px] border-b-[#404246] dark:bg-[#eee] dark:text-[#000]">
-                <Link to="/Vite-Portfolio" className="flex gap-[10px] items-center">
-                    <img
-                        className="w-[30px] h-[30px] object-cover grayscale-[100%] rounded-full"
-                        src="/Vite-Portfolio/Rohan.jpg"></img>
-                    <span>
+        </nav>
+    )
+}
+
+
+function DesktopNav({ handleNavbar, navbar, navLinks, isTheme, setIsTheme, handleActive, menuOption }){
+    return (
+        <nav
+            onChange={handleNavbar}
+            style={{display: navbar ? "flex" : "none"}}
+            className="desktop--nav w-[100vw] py-[1rem] px-[1rem] flex sticky top-0 z-[99] backdrop-blur-[10px] items-center justify-between border-b-[0.4px] border-b-[#404246] dark:backdrop-blur-[10px] dark:text-[#000]">
+            <Link to="/Vite-Portfolio" className="flex gap-[10px] items-center">
+                <img
+                    className="w-[30px] h-[30px] object-cover grayscale-[100%] rounded-full"
+                    src="/Vite-Portfolio/Rohan.jpg"></img>
+                <span>
         <p>Rohan</p>
         <p>Chaudhary</p>
       </span>
-                </Link>
-                <ul className="flex border-[#6e40c9] bg-[#11151f] border-[1px] rounded-md text-[1.2rem] px-[10px] uppercase divide-x-[0.2px] divide-[#273550] dark:bg-[#fff]">
-                    {navLinks.map((links, index) => {
-                        return (
-                            <li
-                                className="cursor-pointer hover:bg-[#0f1116] hover:border-[#404246] hover:ring-[0.2px] hover:text-[#eee] rounded-sm my-[5px] py-[10px] px-[10px] dark:hover:bg-[#eee] dark:hover:text-[#000] w-[100px] text-center"
-                                key={index}>
-                                <Link onClick={handleActive} to={links.link}>{links.name}</Link>
-                            </li>
-                        );
-                    })}
-                </ul>
-                <span className="flex gap-[20px]">
+            </Link>
+            <ul className="nav--links--container flex border-[#6e40c9] bg-[#11151f] border-[1px] rounded-md text-[1.2rem] px-[10px] uppercase divide-x-[0.2px] divide-[#273550] dark:bg-[#fff]">
+                {navLinks.map((links, index) => {
+                    return (
+                        <li
+                            className="cursor-pointer hover:bg-[#0f1116] hover:border-[#404246] hover:ring-[0.2px] hover:text-[#eee] rounded-sm my-[5px] py-[10px] px-[10px] dark:hover:bg-[#eee] dark:hover:text-[#000] w-[100px] text-center"
+                            key={index}>
+                            <Link onClick={handleActive} to={links.link}>{links.name}</Link>
+                        </li>
+                    );
+                })}
+            </ul>
+            <span className="flex gap-[20px]">
           <ThemeBtn isTheme={isTheme} setIsTheme={setIsTheme}/>
           <Link to="/Vite-Portfolio/contact"
                 className="dot flex items-center mr-[30px] uppercase text-[1.2rem] bg-[#6e40c9] py-[10px] rounded-md px-[10px] dark:text-[#fff]">
             Contact
           </Link>
+                <button onClick={menuOption} className="menu--btn w-[40px]">
+                <img className="invert dark:invert-0" src="/Vite-Portfolio/Icons/menu.png"
+                     alt="btn"></img>
+            </button>
         </span>
-            </nav>
-        </>
+        </nav>
     )
 }

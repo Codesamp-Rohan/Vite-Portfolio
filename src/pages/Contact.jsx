@@ -32,6 +32,8 @@ export function Contact(){
                 <h1 className="text-[2.8vw]">Wanna know anything? Just text here 😁</h1>
                 <span className="flex flex-col gap-[10px] py-[40px]">
                 <input
+                    name="Name"
+                    id="name"
                     onChange={(e) => setFullName(e.target.value)}
                     value={fullName}
                     className="w-[45vw] text-[24px] border-[0.3px] border-[#97ee81] text-[#97ee81] bg-transparent p-[14px] rounded-md dark:border-[#65B741] dark:border-[1px] dark:text-[#65B741]"
@@ -40,6 +42,8 @@ export function Contact(){
                     type="text"
                 />
 <input
+    name="email"
+    id="email"
     onChange={(e) => setMessage(e.target.value)}
     value={message}
     className="w-[45vw] text-[24px] border-[0.3px] border-[#97ee81] text-[#97ee81] bg-transparent p-[14px] rounded-md dark:border-[1px] dark:border-[#65B741] dark:text-[#65B741]"

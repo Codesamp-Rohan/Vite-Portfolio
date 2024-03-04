@@ -13,6 +13,15 @@
         align-items: flex-start;
         width: 80vw;
     }
+    .nav--links--container{
+        display: none;
+    }
+    .dot{
+        display: none;
+    }
+    .menu--btn{
+        display: block;
+    }
 }
 @media (max-width: 860px) {
     .home-section-content{
@@ -52,6 +61,15 @@
     }
     .single--project--heading{
         font-size: 1.3rem;
+    }
+    .project--content--container > h1{
+        font-size: 1.4rem;
+    }
+    .project--link{
+        font-size: 1.7rem;
+    }
+    .project--container{
+        margin-block: 40px;
     }
 }
 @media (max-width: 600px){
@@ -100,6 +118,7 @@
     }
     .project--container{
         margin-block: 50px;
+        padding: 0;
     }
     .form--heading{
         font-size: 14px;

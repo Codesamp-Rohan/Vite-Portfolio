@@ -19,7 +19,7 @@ export default function ThemeBtn({isTheme, setIsTheme}){
     return (
         // <button className="border-[0.2px] border-[#6e40c9] rounded-md px-[30px]">Theme</button>
         <>
-        <label className="relative inline-flex items-center cursor-pointer border-[0.4px] border-[#6e40c9] rounded-md px-[20px] dark:bg-[#eee] dark:text-[#000] py-[8px]">
+        <label className="relative inline-flex items-center border-[0.4px] border-[#6e40c9] rounded-md px-[20px] dark:bg-[#eee] dark:text-[#000] py-[8px]">
             <input
                 type="checkbox"
                 value=""

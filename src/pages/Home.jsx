@@ -10,12 +10,6 @@ export default function Home(){
 
     const [isTheme, setIsTheme] = useState(true);
 
-    const [isActive, setIsActive] = useState(false);
-
-    const handleActive = () => {
-        setIsActive(true);
-    }
-
     const [pageSize, setPageSize] = useState(false);
 
     const handleGithubImg = () => {
@@ -48,7 +42,7 @@ export default function Home(){
     return (
         <>
             {/*<PageTransition isActive={isActive}/>*/}
-            <Navbar handleActive={handleActive} isTheme={isTheme} setIsTheme={setIsTheme}/>
+            <Navbar isTheme={isTheme} setIsTheme={setIsTheme}/>
             <Main />
             <GithubSection handleGithubImg={handleGithubImg} pageSize={pageSize} isTheme={isTheme} setIsTheme={setIsTheme}/>
             <AboutMe />

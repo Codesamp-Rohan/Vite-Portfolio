@@ -22,9 +22,9 @@ export function Footer(){
             <form className="py-[30px] px-[20px]">
                 <h1 className="form--heading text-[2.8vw]">Wanna know anything? Just text here 😁</h1>
                 <span className="flex flex-col gap-[10px] py-[40px]">
-                <input className="contact--input w-[45vw] text-[24px] border-[0.3px] border-[#97ee81] text-[#97ee81] bg-transparent p-[14px] rounded-md dark:border-[#65B741] dark:border-[1px] dark:text-[#65B741]"
+                <input name="name" id="name" className="contact--input w-[45vw] text-[24px] border-[0.3px] border-[#97ee81] text-[#97ee81] bg-transparent p-[14px] rounded-md dark:border-[#65B741] dark:border-[1px] dark:text-[#65B741]"
                        placeholder="Name" required type="name"/>
-                    <input className="contact--input w-[45vw] text-[24px] border-[0.3px] border-[#97ee81] text-[#97ee81] bg-transparent p-[14px] rounded-md dark:border-[#65B741] dark:border-[1px] dark:text-[#65B741]"
+                    <input name="email" id="email" className="contact--input w-[45vw] text-[24px] border-[0.3px] border-[#97ee81] text-[#97ee81] bg-transparent p-[14px] rounded-md dark:border-[#65B741] dark:border-[1px] dark:text-[#65B741]"
                            placeholder="Email address" required type="name"/>
                     <button className="contact--button w-fit bg-[#6e40c9] py-[14px] text-[24px] px-[70px] rounded-md hover:bg-[#97ee81] hover:text-[#000] duration-200 dark:text-[#fff] dark:hover:text-[#000]">SEND</button>
                 </span>

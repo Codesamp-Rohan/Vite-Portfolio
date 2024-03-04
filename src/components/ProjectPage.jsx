@@ -69,13 +69,13 @@ function Project({ ProjectDetails, active, scrollToTop, isTheme }) {
     function Blob({ ProjectDetails }) {
         return (
             <div
-                className="blur--blob absolute z-[1] w-[300px] h-[300px] rounded-full bottom-[0%] right-[10%]" style={{backgroundColor: `#${ProjectDetails.blob}`}}/>
+                className="blur--blob absolute z-[1] w-[300px] h-[300px] rounded-full bottom-[20%] right-[10%]" style={{backgroundColor: `#${ProjectDetails.blob}`}}/>
         )
     }
 
     function SideImage({ ProjectDetails }) {
         return (
-            <img className="side--img absolute w-[24vw] z-[90] rounded-md border-[1px] border-[#000] shadow-3xl bottom-[0] right-[10%]"
+            <img className="side--img absolute w-[24vw] z-[90] rounded-md border-[1px] border-[#000] shadow-3xl bottom-[20%] right-[10%]"
                  src={ProjectDetails.sideImg} alt="side--img"></img>
         )
     }

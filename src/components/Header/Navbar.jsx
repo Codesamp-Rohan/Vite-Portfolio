@@ -88,7 +88,7 @@ function MobileNav({ handleNavbar, navbar, isTheme, setIsTheme, menuOption, isFi
         <nav
             onChange={handleNavbar}
             style={{display: navbar ? "none" : "flex", position: isFixed ? "fixed" : "sticky"}}
-            className="mobile--nav w-[100vw] py-[1rem] px-[2rem] flex top-0 z-[99] backdrop-blur-[10px] items-center justify-between border-b-[0.4px] border-b-[#404246] dark:backdrop-blur-[10px] dark:text-[#000] duration-300">
+            className="mobile--nav w-[100vw] py-[1rem] px-[2rem] flex top-0 z-[99] backdrop-blur-[10px] items-center justify-between border-b-[0.4px] border-b-[#404246] dark:backdrop-blur-[10px] dark:bg-[#eee] dark:text-[#000] duration-300">
             <Link to="/Vite-Portfolio" className="flex gap-[10px] items-center">
                 <img
                     className="w-[30px] h-[30px] object-cover grayscale-[100%] rounded-full"

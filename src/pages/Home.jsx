@@ -58,9 +58,10 @@ function Main() {
         <div className="flex AppScroll relative items-center border-b-[0.5px] border-b-[#404246] overflow-hidden dark:bg-[#fff] dark:border-[1px] dark:border-b-[#cbcbcb]">
             <div className="main--title border-r-[0.5px] border-r-[#404246] h-[60vh] px-[2rem] flex items-center dark:border-r-[#cbcbcb] dark:border-r-[1px] z-[30]">
                 <h1 className="home-section-content text-[5rem] line-height-[10px] text-[#424769] w-[60vw] dark:text-[#888]">
-                    <strong className="text-[#eee] dark:text-[#7743DB]">Front-End</strong> and{" "}
-                    <strong className="text-[#eee] dark:text-[#7743DB]">web development</strong>, driven by
-                    strategy & innovation.
+                    {/*<strong className="text-[#eee] dark:text-[#7743DB]">Front-End</strong> and{" "}*/}
+                    {/*<strong className="text-[#eee] dark:text-[#7743DB]">web development</strong>, driven by*/}
+                    {/*strategy & innovation.*/}
+                    <strong className="text-[#eee] dark:text-[#7743db]">Better</strong> and <strong className="text-[#eee] dark:text-[#7743db]">enhanced Web Developer</strong> than Spiderman itself.
                 </h1>
             <img className="w-[1200px] rotate--svg--at--heading z-[1] opacity-[10%] absolute top-[10%] left-[-40%] dark:opacity-[20%]" src="Vite-Portfolio/Icons/pattern--2.svg" alt="pattern--icons"></img>
             </div>
@@ -100,11 +101,13 @@ function AboutMe() {
         <span className="w-[80vw] divide-y-[0.2px] divide-[#404246]">
           <p className="heading--para text-[18px] py-[30px] dark:text-[#65B741]">About Me:</p>
           <h1 className="description text-[40px] text-justify text-[#fff] py-[30px] dark:text-[#000]">
-            I am an independent full-service studio creating awesome digital
-            experiences and solutions. We are an award winning group
-            specializing in branding, design and engineering. Our mission is to
-            make work meaningful.
-              <br /> <br />I am high on SKILLS.
+            {/*I am an independent full-service studio creating awesome digital*/}
+            {/*experiences and solutions. We are an award winning group*/}
+            {/*specializing in branding, design and engineering. Our mission is to*/}
+            {/*make work meaningful.*/}
+              I am a Web Developer and UI/UX Designer. I have 2+ years of experience.
+              My mission is to be best in my skill and give the best result from my hardwork and dedication.
+              <br /> <br />I am high on SKILLS 🤗.
           </h1>
           <Link className="border-none" to="/Vite-Portfolio/contact">
             <button className="px-[20px] py-[10px] rounded-md border-[0.2px] border-[#6e40c9] bg-[#6e40c9] text-[1.2rem] uppercase duration-300 hover:border-[#97ee81] hover:bg-[#97ee81] hover:text-[#000]">

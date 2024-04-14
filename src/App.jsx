@@ -34,15 +34,15 @@ export default function App() {
       <MouseFollower />
       <BrowserRouter>
         <Routes>
-          <Route path="/Vite-Portfolio/" element={<Home />} />
-          <Route path="/Vite-Portfolio/work" element={<Work />} />
-          <Route path="/Vite-Portfolio/services" element={<Services />} />
-          <Route path="/Vite-Portfolio/contact" element={<Contact />} />
-          <Route path="/Vite-Portfolio/sibiro" element={<Sibiro />} />
-          <Route path="/Vite-Portfolio/cosmetics" element={<Cosmetics />} />
-          <Route path="/Vite-Portfolio/docyard" element={<Docyard />} />
-          <Route path="/Vite-Portfolio/quasar" element={<Quasar />} />
-          <Route path="/Vite-Portfolio/portfolio" element={<Portfolio />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/work" element={<Work />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/sibiro" element={<Sibiro />} />
+          <Route path="/cosmetics" element={<Cosmetics />} />
+          <Route path="/docyard" element={<Docyard />} />
+          <Route path="/quasar" element={<Quasar />} />
+          <Route path="/portfolio" element={<Portfolio />} />
         </Routes>
       </BrowserRouter>
     </ThemeProvider>

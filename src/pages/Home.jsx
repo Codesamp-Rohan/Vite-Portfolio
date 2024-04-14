@@ -80,12 +80,12 @@ function GithubSection({ handleGithubImg, pageSize, isTheme }) {
                     isTheme ? (<img
                         className="border-[0.3px] border-[#404246] rounded-3xl"
                         style={{width: pageSize ? "80vw" : "90vw"}}
-                        src={pageSize ? "/Vite-Portfolio/GithubProfile.png" : "/Vite-Portfolio/github--mobile.jpg"}
+                        src={pageSize ? "/GithubProfile.png" : "/github--mobile.jpg"}
                         onChange={handleGithubImg}
                         alt="images"></img> ): (<img
                         className="border-[0.3px] border-[#404246] rounded-3xl dark:shadow-2xl"
                         style={{width: pageSize ? "80vw" : "90vw"}}
-                        src={pageSize ? "/Vite-Portfolio/light--GithubProfile.png" : "/Vite-Portfolio/github--mobile.jpg"}
+                        src={pageSize ? "/light--GithubProfile.png" : "/github--mobile.jpg"}
                         onChange={handleGithubImg}
                         alt="images"></img>)
                 }
@@ -109,7 +109,7 @@ function AboutMe() {
               My mission is to be best in my skill and give the best result from my hardwork and dedication.
               <br /> <br />I am high on SKILLS 🤗.
           </h1>
-          <Link className="border-none" to="/Vite-Portfolio/contact">
+          <Link className="border-none" to="/contact">
             <button className="px-[20px] py-[10px] rounded-md border-[0.2px] border-[#6e40c9] bg-[#6e40c9] text-[1.2rem] uppercase duration-300 hover:border-[#97ee81] hover:bg-[#97ee81] hover:text-[#000]">
               TALK
             </button>
@@ -122,25 +122,25 @@ function AboutMe() {
 
 function TechMarquee({ isTheme }) {
     const skills = [
-        { name: "HTML", img: "/Vite-Portfolio/Icons/html.png" },
-        { name: "CSS", img: "/Vite-Portfolio/Icons/css.png" },
-        { name: "JavaScript", img: "/Vite-Portfolio/Icons/js.png" },
-        { name: "React Js", img: "/Vite-Portfolio/Icons/react.png" },
+        { name: "HTML", img: "/Icons/html.png" },
+        { name: "CSS", img: "/Icons/css.png" },
+        { name: "JavaScript", img: "/Icons/js.png" },
+        { name: "React Js", img: "/Icons/react.png" },
         {
             name: "Tailwind CSS",
-            img: "/Vite-Portfolio/Icons/tailwind.png",
+            img: "/Icons/tailwind.png",
         },
         {
             name: "GSAP",
-            img: "/Vite-Portfolio/Icons/gsap.jpg",
+            img: "/Icons/gsap.jpg",
         },
         {
             name: "ScrollTrigger",
-            img: "/Vite-Portfolio/Icons/gsap.jpg",
+            img: "/Icons/gsap.jpg",
         },
         {
             name: "Framer-Motion",
-            img: "/Vite-Portfolio/Icons/framer-motion.png",
+            img: "/Icons/framer-motion.png",
         },
     ];
     // "marquee-fade w-full h-full"

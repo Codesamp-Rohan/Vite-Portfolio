@@ -63,7 +63,7 @@ function Main() {
                     {/*strategy & innovation.*/}
                     <strong className="text-[#eee] dark:text-[#7743db]">Better</strong> and <strong className="text-[#eee] dark:text-[#7743db]">enhanced Web Developer</strong> than Spiderman itself.
                 </h1>
-            <img className="w-[1200px] rotate--svg--at--heading z-[1] opacity-[10%] absolute top-[10%] left-[-40%] dark:opacity-[20%]" src="Vite-Portfolio/Icons/pattern--2.svg" alt="pattern--icons"></img>
+            <img className="w-[1200px] rotate--svg--at--heading z-[1] opacity-[10%] absolute top-[10%] left-[-40%] dark:opacity-[20%]" src="/Icons/pattern--2.svg" alt="pattern--icons"></img>
             </div>
             <div className="w-[50vw] homesection--ball absolute right-[-50%] top-[20%] translate-x-[-50%] z-[1] border-[0.5px] border-[#404246] rounded-full h-[600px] bg-[#0f1116] grayscale-[60%] dark:bg-[#f6f8fa] dark:border-[#cbcbcb] dark:border-r-[1px] dark:border-[1px]"></div>
         </div>

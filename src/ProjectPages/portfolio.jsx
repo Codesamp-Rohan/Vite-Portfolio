@@ -76,9 +76,7 @@ const Slider = ({ pageSize, handleSize }) => {
   });
 
   return (
-    <div
-      className="relative flex justify-center border-y-[0.2px] border-y-[#404246] py-[100px] dark:border-y-[#cbcbcb] dark:
-        bg-[#fff]">
+    <div className="relative flex justify-center border-y-[0.2px] border-y-[#404246] py-[100px] dark:border-y-[#cbcbcb] dark:bg-[#fff]">
       <div style={{ marginBottom: "1rem" }}>
         <button
           className="single--project--btn absolute bg-[#6e40c9] p-[20px] rounded-md top-[50%] left-[3%] hover:bg-[#273550] translate-y-[-50%]"

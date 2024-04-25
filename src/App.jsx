@@ -12,6 +12,7 @@ import { LoadPage } from "./components/LoadPage.jsx";
 import { MouseFollower } from "./components/MouseFollower.jsx";
 import { ThemeProvider } from "./context/theme.js";
 import { useEffect, useState } from "react";
+import {Holesail} from "./ProjectPages/Holesail.jsx";
 
 export default function App() {
   const [themeMode, setThemeMode] = useState("light");
@@ -38,6 +39,7 @@ export default function App() {
           <Route path="/work" element={<Work />} />
           <Route path="/services" element={<Services />} />
           <Route path="/contact" element={<Contact />} />
+           <Route path="/holesail" element={<Holesail />} />
           <Route path="/sibiro" element={<Sibiro />} />
           <Route path="/cosmetics" element={<Cosmetics />} />
           <Route path="/docyard" element={<Docyard />} />

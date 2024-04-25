@@ -10,6 +10,17 @@ export function ProjectPage({ active, isTheme }) {
 
   const projectDetails = [
     {
+      img: "/Projects/holesail-1.png",
+      sideImg: "/Projects/holesail-mobile.png",
+      content:
+        "is a peer to peer reverse tunneling software for instant access of localhost just by sharing the seed(key).",
+      exploreLinksBtn: "Explore HOLESAIL",
+      exploreLinks: "/holesail",
+      quickLinksBtn: "holesail.io",
+      blob: "6e40c999",
+      dataValue: "1",
+    },
+    {
       img: "/Projects/sibiro.png",
       sideImg: "/Projects/sibiro--menu.png",
       content:
@@ -17,7 +28,7 @@ export function ProjectPage({ active, isTheme }) {
       exploreLinksBtn: "Explore SIBIRO",
       exploreLinks: "/sibiro",
       quickLinksBtn: "sibiro.ru",
-      blob: "6e40c999",
+      blob: "97ee8199",
       dataValue: "1",
     },
     {
